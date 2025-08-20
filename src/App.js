@@ -1,12 +1,14 @@
 
 import './App.css';
-import Counter from './components/Counter';
+
 import Navbar from './components/Navbar/Navbar';
+import About from './components/About/About';
 function App() {
   return (
     <div class="App">
       <Navbar/>
-      <Counter/>
+      <About/>
+      
     
     </div>
   );
