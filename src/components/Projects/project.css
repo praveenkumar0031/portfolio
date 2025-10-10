@@ -1,21 +1,39 @@
-
-.projects {
-    
-    min-height: 100vh;
-    padding: 60px 5% 80px 5%;
-    background-color: #f4f4f9;
-    color: #333; 
+:root {
+    --primary-color: #5a5fa8;
+    --accent-live-color: #ff0000;
+    --background-color: #f8f8f8;
+    --card-bg-color: #ffffff;
+    --text-color-dark: #333;
+    --text-color-medium: #666;
+    --border-radius-card: 12px;
+    --shadow-soft: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
-.projects h2 {
+.project-seg {
+    min-height: 100vh;
+    padding: 80px 5% 100px 5%;
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+}
+
+.projects {
+
+    min-height: 100vh;
+    padding: 60px 5% 80px 5%;
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+}
+
+.my-project {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.8em;
     font-weight: 700;
-    color: #4a4e69;
-    margin-bottom: 40px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #5a5fa8; 
-    display: inline-block; 
+    background-color: var(--background-color);
+    color: var(--text-color-dark);
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid var(--primary-color);
+    display: inline-block;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -23,28 +41,29 @@
 }
 
 
+
 .projects {
-    
+
     display: grid;
-    
+
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; 
+    gap: 30px;
     padding-top: 20px;
 }
 
 
-.projects > div {
-    
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden; 
+.projects>div {
+
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
 }
 
 
-.projects > div:hover {
+.projects>div:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -53,7 +72,7 @@
 
 .title {
     font-size: 1.5em;
-    color: #5a5fa8; 
+    color: #5a5fa8;
     padding: 15px 15px 5px 15px;
     margin-top: 0;
 }
@@ -66,17 +85,18 @@
     margin-bottom: 10px;
 }
 
-.tech, .des {
+.tech,
+.des {
     padding: 0 15px;
     margin-bottom: 8px;
     font-size: 0.95em;
     line-height: 1.4;
-    color: #666;
+    color: var(--text-color-medium);
 }
 
 .tech {
     font-weight: 600;
-    color: #4a4e69;
+    color: var(--text-color-dark);
 }
 
 .des {
@@ -87,7 +107,7 @@
 
 .link {
     padding: 10px 15px 0 15px;
-    text-align: right; /* Places the link on the right side */
+    text-align: right;
 }
 
 .link a {
@@ -108,16 +128,87 @@
 
 @media (max-width: 768px) {
     .projects {
-        
+
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         padding: 40px 5% 60px 5%;
     }
+
     .projects h2 {
         font-size: 2em;
     }
 }
 
+.link a {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #5a5fa8, #6d40d7);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.link a:hover {
+    background: linear-gradient(135deg, #4a4e69, #5a5fa8);
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+
+.link,
+.live-link {
+    padding: 10px 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.live-link a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgba(255, 0, 0, 0.4);
+    ;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95em;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.4);
+}
+
+.live-link a:before {
+    content: '●';
+    font-size: 1.2em;
+    line-height: 1;
+    margin-right: 6px;
+}
+
+.live-link a:hover {
+    background-color: #cc0000;
+
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
 @media (max-width: 480px) {
+
+    .link,
+    .live-link {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
     .projects {
         grid-template-columns: 1fr;
         gap: 20px;

@@ -1,8 +1,4 @@
-
-
-
-
-const Linkbutton = ({ to,children }) => {
+const Linkbutton = ({ to, children }) => {
 
 
     const handleClick = (e) => {
@@ -22,7 +18,7 @@ const Linkbutton = ({ to,children }) => {
     return (
         <li>
             <a
-                href={`#${to}`} 
+                href={`#${to}`}
                 className="nav-link"
                 onClick={handleClick}
             >
