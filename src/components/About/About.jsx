@@ -2,7 +2,7 @@ import mypic from "../../assets/hood-pic.png";
 import "./about.css";
 export default function About(){
     return(
-        <div className="about">
+        <div id="about" className="about">
             <div className="txt-box">
                 <div className="txt">
                     <h2>Aspiring Software Engineer | Java, Python, and SQL</h2>

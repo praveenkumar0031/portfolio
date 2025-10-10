@@ -2,7 +2,11 @@
   text-align: center;
 
 }
-
+#project{
+  width: 600px;
+  height: 600px;
+  background-color: aliceblue;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
