@@ -23,13 +23,13 @@ export const aboutData = {
             type: "skill-area"
         },
         {
-            title: "Machine Learning:",
-            details: "Developed an attendance automation system using Python, Flask, and OpenCV, achieving high accuracy in face recognition.",
+            title: "Web Technologies:",
+            details: "Familiar with front-end (React, HTML, CSS, JS) and back-end (Java SpringBoot) REST api development for creating interactive applications and data management. Developed a production ready Containers using docker.",
             type: "skill-area"
         },
         {
-            title: "Web Technologies:",
-            details: "Familiar with front-end (React, HTML, CSS, JS) and back-end (Java SpringBoot) REST api development for creating interactive applications and data management.",
+            title: "Product Deployment:",
+            details: "Had Experience with platforms like linux ,docker ",
             type: "skill-area"
         },
         {

@@ -12,9 +12,10 @@ function Project() {
           <div key={project.id}>
             <h3 className='title'>{project.title}</h3>
             <img className='thumbnail' src={project.url} />
+            {project.type&&(<h2 className="type-topic">{project.type} Project</h2>)}
             <p className='tech'>Technologies: {project.tech}</p>
             <p className='des'> <h3>Project Details:</h3> {project.des}</p>
-            <p className='link'><a href={project.link} target='_blank'>watch out</a></p>
+            <p className='link'><a href={project.link} target='_blank'>check out</a></p>
             {project.live && (<p className='live-link'>
               <a href={project.live} target='_blank' rel='noopener noreferrer'>LIVE</a>
             </p>
