@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.8df0a719.css",
+    "main.js": "/portfolio/static/js/main.604be355.js",
+    "static/js/453.ad7768ec.chunk.js": "/portfolio/static/js/453.ad7768ec.chunk.js",
+    "static/media/myfullpic.jpg": "/portfolio/static/media/myfullpic.14e34030ed9e1573baf7.jpg",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.23e8893e585fbbc41af3.pdf",
+    "static/media/scms.jpeg": "/portfolio/static/media/scms.3a1170b55c93f3070359.jpeg",
+    "static/media/bankmanagement.jpeg": "/portfolio/static/media/bankmanagement.dcf06952a245d07324fd.jpeg",
+    "static/media/todos.jpeg": "/portfolio/static/media/todos.ee1f8633384b26b26c6d.jpeg",
+    "static/media/chat.jpeg": "/portfolio/static/media/chat.0ebec6763f101a7f72bb.jpeg",
+    "static/media/videocall.jpeg": "/portfolio/static/media/videocall.9317fae7fa5a1dee62fa.jpeg",
+    "static/media/filimin.jpeg": "/portfolio/static/media/filimin.10d3ed090ea882d57205.jpeg",
+    "static/media/ubuntu.jpeg": "/portfolio/static/media/ubuntu.2946905f3600f3a3e2ae.jpeg",
+    "static/media/node.jpeg": "/portfolio/static/media/node.4bc16154eb3b442faf8a.jpeg",
+    "static/media/eclipse.jpeg": "/portfolio/static/media/eclipse.f3ab28afc598bd1d599f.jpeg",
+    "static/media/c.jpeg": "/portfolio/static/media/c.2571d12115c89d83a5e8.jpeg",
+    "static/media/mail.jpeg": "/portfolio/static/media/mail.072df52403f0dd68c915.jpeg",
+    "static/media/intelij.jpeg": "/portfolio/static/media/intelij.dc3d496b365a8843a74b.jpeg",
+    "static/media/java.jpeg": "/portfolio/static/media/java.d509c053752b66985d1a.jpeg",
+    "static/media/ps.jpeg": "/portfolio/static/media/ps.7b8574c604dc37f7f3f4.jpeg",
+    "static/media/figma.jpeg": "/portfolio/static/media/figma.b7e1d93b2906611388e7.jpeg",
+    "static/media/docker.jpeg": "/portfolio/static/media/docker.e8c5d7c5d618336db0ec.jpeg",
+    "static/media/git.jpeg": "/portfolio/static/media/git.1101217a4a6ffdfb89ea.jpeg",
+    "static/media/javascript.jpeg": "/portfolio/static/media/javascript.5819f6dba8add73f041f.jpeg",
+    "static/media/github.jpeg": "/portfolio/static/media/github.8129952f265b9a77cb57.jpeg",
+    "static/media/vscode.jpeg": "/portfolio/static/media/vscode.da528e0e876ae2b70277.jpeg",
+    "static/media/lkin.jpeg": "/portfolio/static/media/lkin.5b1a7daa220c1e597a0b.jpeg",
+    "static/media/react.jpeg": "/portfolio/static/media/react.5409e4445e4f12254665.jpeg",
+    "static/media/mysql.jpeg": "/portfolio/static/media/mysql.9e4c7326718642aabbaf.jpeg",
+    "index.html": "/portfolio/index.html",
+    "main.8df0a719.css.map": "/portfolio/static/css/main.8df0a719.css.map",
+    "main.604be355.js.map": "/portfolio/static/js/main.604be355.js.map",
+    "453.ad7768ec.chunk.js.map": "/portfolio/static/js/453.ad7768ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8df0a719.css",
+    "static/js/main.604be355.js"
+  ]
+}
