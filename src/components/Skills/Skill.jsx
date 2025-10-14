@@ -2,8 +2,9 @@ import { skillsData } from "../../assets/Datas/skillsData";
 import "./skill.css";
 
 const SkillCategory = ({ title, skills }) => (
-    <div id="skills" className="skill-category">
-        <h4>{title}</h4>
+    
+    <div  className="skill-category">
+        <h4 >{title}</h4>
         <div className="skills-grid">
             {skills.map((skill, index) => (
                 <div className="skill-item" key={index}>
@@ -18,8 +19,8 @@ const SkillCategory = ({ title, skills }) => (
 export default function Skills() {
     return (
         <div className="skill-seg">
-            <h2 className="skill-cat">Skills</h2>
-            <section className="skills-section">
+            <h2  className="skill-cat">Skills</h2>
+            <section id="skills" className="skills-section">
 
                 {Object.entries(skillsData).map(([category, skills]) => (
                     <SkillCategory key={category} title={category} skills={skills} />

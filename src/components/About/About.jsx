@@ -1,5 +1,5 @@
 import "./about.css";
-import { aboutData, selfimg } from '../../assets/Datas/aboutData';
+import { aboutData} from '../../assets/Datas/aboutData';
 
 export default function About() {
     const renderCompetencies = () => {

@@ -1,0 +1,52 @@
+/* contact.css */
+
+#contact {
+  padding: 50px 20px;
+  background-color: #4a4e69;
+  text-align: center;
+  height: 100px; 
+  
+}
+
+#contact h2 {
+  margin-top: -2%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-box a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-box a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.btn-box a:hover .icon {
+  transform: rotate(15deg);
+}

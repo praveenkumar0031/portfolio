@@ -1,4 +1,4 @@
-import img from '../hood-pic.png';
+import img from '../myfullpic.jpg';
 export const selfimg = img;
 export const aboutData = {
     intro: "I am a dedicated and analytical Information Technology student with hands-on experience in software development through academic and personal projects. My goal is to leverage my skills in programming and problem-solving to contribute to a forward-thinking organization.",
