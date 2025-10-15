@@ -8,7 +8,7 @@ const Contactlink = () => {
     {
       name: "Mail",
       icon: mail,
-      link: "https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=Hello&body=This%20is%20a%20test",
+      link: "https://mail.google.com/mail/?view=cm&fs=1&to=praveen0031kumar@gmail.com&su=Hi&body=This%20is%20about%20position%20you%20are%20seeking",
     },
     {
       name: "LinkedIn",
