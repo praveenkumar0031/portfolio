@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">Developer's Portfolio</h2>
+      <h2 className="logo">Praveen's Portfolio</h2>
 
 
       <button

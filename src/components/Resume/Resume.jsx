@@ -2,7 +2,7 @@ import React from "react";
 import resume from '../../assets/resume.pdf'
 import './resume.css';
 const Resume = () => {
-  const resumeLink = resume; // Place your resume in public/assets folder
+  const resumeLink = resume; 
 
   return (
     <div id="resume" className="flex flex-col items-center justify-center p-8">
