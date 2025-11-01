@@ -9,7 +9,7 @@
 
 .about {
     min-height: 90vh;
-    padding: 0px 5%;
+    padding: 30px 5%;
     background-color: var(--secondary-color);
     color: var(--text-color);
     display: grid;

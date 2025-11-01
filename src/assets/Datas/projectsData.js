@@ -5,6 +5,7 @@ import projectpic4 from '../projectpics/weather.jpeg'
 import projectpic5 from '../projectpics/todos.jpeg'
 import projectpic6 from '../projectpics/videocall.jpeg'
 import projectpic7 from '../projectpics/scms.jpeg'
+import projectpic8 from '../projectpics/coach.jpeg'
 
 
 
@@ -16,6 +17,7 @@ export const projects=[
 { id: 4, title: "Weather app",type:"Solo", tech: "React.js, Tailwind CSS, and OpenWeather API",des:"A responsive Real-time weather web application built with React.js, Tailwind CSS, and OpenWeather API, providing current weather and 5-day forecasts for any city.City-based search Displays temperature (°C), humidity, wind speed, and pressure Loading animations & error handling for invalid searches Fully responsive mobile-friendly design",url:projectpic4,link:"https://github.com/praveenkumar0031/weather-app",live:"https://weather-app-rho-wheat.vercel.app" },
 { id: 5, title: "Task-Manager",type:"Solo", tech: "React.js, Java (Springboot API), MySql",des:"Task-Manager: Built a task management web application using Java Spring Boot for the backend and React for the frontend. Implemented features such as task creation, updating, deletion, and status tracking with RESTful APIs. Designed a secure, scalable backend with database integration and deployed the system for real-time task management.",url:projectpic5,link:"https://github.com/praveenkumar0031/filim.in" },
 { id: 6, title: "Video calling app",type:"Solo", tech: "React.js,open-Api",des:"Video Call App: Developed a real-time communication platform using Java Spring Boot for the backend and WebRTC for peer-to-peer video/audio streaming. Implemented secure signaling, user authentication, and session management via REST APIs and WebSockets. Designed a scalable architecture to support smooth video calls, ensuring low latency and reliable connectivity.",url:projectpic6,link:"https://github.com/praveenkumar0031/filim.in" },
+{ id: 8, title: "Coach Desk",type:"Solo", tech: "React-vite,Tailwindcss,Express,node,Firebase",des:"A full-stack Coach Management Admin Panel built with React (Vite) on the frontend and Node.js + Express + Firebase Realtime Database on the backend. The system allows administrators to manage coaches — including adding, updating, filtering, sorting, and deleting — with a responsive and elegant interface.",url:projectpic8,link:"https://github.com/praveenkumar0031/CoachDesk",live:"https://coach-desk.vercel.app" },
 
 ];
 export function getProjectCount() {

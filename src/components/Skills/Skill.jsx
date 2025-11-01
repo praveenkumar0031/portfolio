@@ -18,14 +18,16 @@ const SkillCategory = ({ title, skills }) => (
 
 export default function Skills() {
     return (
+        <div id="skills">
         <div className="skill-seg">
             <h2  className="skill-cat">Skills</h2>
-            <section id="skills" className="skills-section">
+            <section className="skills-section">
 
                 {Object.entries(skillsData).map(([category, skills]) => (
                     <SkillCategory key={category} title={category} skills={skills} />
                 ))}
             </section>
+        </div>
         </div>
     );
 }

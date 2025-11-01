@@ -1,5 +1,10 @@
 /* contact.css */
-
+.credits{
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
 #contact {
   padding: 50px 20px;
   background-color: #4a4e69;

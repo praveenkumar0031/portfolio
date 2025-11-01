@@ -41,6 +41,9 @@ const Contactlink = () => {
         </a>
       ))}
     </div>
+    <p className='credits'>Developed by Praveen ©</p>
+    
+    
     </div>
   );
 };
