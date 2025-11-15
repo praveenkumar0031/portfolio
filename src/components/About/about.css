@@ -1,134 +1,275 @@
 :root {
-    --primary-color: #5a5fa8;
-    --secondary-color: #f4f4f9;
-    --text-color: #333;
-    --light-text-color: #666;
-    --border-radius: 10px;
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --bg-color: #f0f4fc;
+  --accent-color: #5a5fa8;       /* Spider-Man red */
+  --secondary-color: #7f93ca;    /* Spider-Man blue */
+  --text-color: #222;
+  --sticker-size: 70px;
+  --note-bg: #ffeb99;            /* sticky note color */
+  --bubble-bg: #f0f4fc;
+  --arrow-color: #9c1d1d;
+  --heading-font: "Comic Sans MS", "Bangers", sans-serif;
+  --doodle-color: #e5302b;       /* web doodle color */
 }
 
+/* =========================================================
+   ABOUT SECTION
+========================================================= */
 .about {
-    min-height: 90vh;
-    padding: 30px 5%;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 60px;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 60px;
+  background: var(--bg-color);
+  min-height: 100vh;
+  gap: 20px;
+  font-family: var(--heading-font);
+  overflow: hidden;
 }
 
-.txt-box {
-    padding-right: 20px;
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  opacity: 0.25;
+  pointer-events: none;
 }
 
-.txt h2 {
-    color: var(--primary-color);
-    font-size: 2.2em;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
+/* =========================================================
+   PAPER PIECES
+========================================================= */
+.paper-piece {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: var(--note-bg);
+  opacity: 0.8;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 10px;
+  animation: floatPP 6s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+@keyframes floatPP {
+  0% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(-2deg); }
+}
+
+/* =========================================================
+   STICKERS
+========================================================= */
+.sticker img {
+  width: var(--sticker-size);
+  height: var(--sticker-size);
+  object-fit: cover;
+  border-radius: 10px;
+  rotate: -5deg;
+  filter: drop-shadow(1px 2px 3px #0002);
+}
+
+.s1 { position: absolute; top: 10px; right: 10px; }
+.s2 { position: absolute; bottom: 40px; right: 80px; rotate: 6deg; }
+.s3 { position: absolute; bottom: 120px; left: 20px; rotate: -3deg; }
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+h2 {
+  font-family: var(--heading-font);
+  font-size: 2.8rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .section-title-underline {
-    font-size: 1.5em;
-    color: var(--text-color);
-    font-weight: 600;
-    margin-top: 30px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid var(--primary-color);
-    display: inline-block;
+  position: relative;
 }
 
-.intro-text {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-top: 20px;
-    color: var(--light-text-color);
+.section-title-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 70%;
+  height: 6px;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  animation: scribble 1.5s infinite alternate;
 }
 
+@keyframes scribble {
+  0% { transform: scaleX(0.9); }
+  100% { transform: scaleX(1.05); }
+}
+
+/* =========================================================
+   TEXT BOXES / STICKY NOTES
+========================================================= */
+.txt-box {
+  width: 55%;
+  position: relative;
+  z-index: 5;
+}
 
 .skill-item {
-
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-left: 4px solid var(--primary-color);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-light);
+  background: var(--note-bg);
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 2px solid var(--secondary-color);
+  font-family: var(--heading-font);
+  position: relative;
 }
 
 .skill-item h3 {
-    font-size: 1.15em;
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+  color: var(--accent-color);
 }
 
-.skill-item p {
-    font-size: 0.95em;
-    line-height: 1.4;
-    color: var(--light-text-color);
-    margin: 0;
+/* Spider web doodles on sticky notes */
+.doodle {
+  position: absolute;
+  font-size: 22px;
+  color: var(--doodle-color);
+  font-family: var(--heading-font);
+  animation: doodleMove 2s infinite alternate;
 }
 
+@keyframes doodleMove {
+  0% { transform: translate(0,0) rotate(0deg); }
+  50% { transform: translate(2px,-3px) rotate(-5deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+/* Mini spider webs / doodles */
+.web1 { top: 10px; left: 20px; }
+.web2 { top: 80px; right: 40px; }
+.web3 { top: 160px; left: 150px; }
+
+/* =========================================================
+   PROFILE IMAGE AND SPIDER-WEB BACKGROUND
+========================================================= */
 .img-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 5;
+  position: relative;
+  margin-top: 20px;
+}
+/* =========================================================
+   PROFILE IMAGE AND SPIDER-WEB BACKGROUND
+========================================================= */
+.img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 5;
+  position: relative;
+  margin-top: 20px;
 }
 
-.box {
-    position: relative;
-    width: 350px;
-    height: 350px;
-    background-color: var(--primary-color);
-    border-radius: 40% 60% 65% 35% / 30% 45% 55% 70%;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-    transition: all 0.5s ease-in-out;
-
-    margin-top: 0%;
+/* Spider web background */
+.img-box::before {
+  content: "";
+  position: absolute;
+  top: 130%;
+  left: 10%;
+  width: 360px;
+  height: 360px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.25;
+  background:
+    repeating-radial-gradient(circle at center, transparent 2px 0px, var(--secondary-color) 3px 32px);
+    
+  background-blend-mode: multiply;
 }
 
-
-.box:hover {
-    border-radius: 65% 35% 40% 60% / 55% 40% 60% 45%;
-    transform: scale(1.05);
+.img-box .box {
+  padding: 10px;
+  background: var(--bubble-bg);
+  border: 3px solid #000;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 #img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 280px;
+  border-radius: 12px;
+  z-index: 2;
 }
 
-
-
-@media (max-width: 992px) {
-    .about {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-
-    .txt-box {
-        order: 2;
-        padding-right: 0;
-    }
-
-    .img-box {
-        order: 1;
-    }
-
-    .box {
-        width: 300px;
-        height: 300px;
-        margin: 0 auto;
-    }
+/* =========================================================
+   STICKY NOTE DIALOGUE UNDER PROFILE
+========================================================= */
+.intro-text {
+  max-width: 300px;
+  background: var(--note-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1.1rem;
+  text-align: left;
+  position: relative;
+  margin-top: 40px; 
+  transform: rotate(-2deg); 
+  box-shadow: 4px 4px 0 #0002;
 }
+
+/* Small doodle pin */
+.intro-text::before {
+  content: "📌";
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  font-size: 20px;
+}
+
+/* =========================================================
+   WIGGLE ARROWS
+========================================================= */
+.arrow {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  animation: wiggle 1.5s infinite ease-in-out alternate;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(-3deg); }
+  100% { transform: rotate(3deg); }
+}
+
+.arrow svg path {
+  stroke: var(--arrow-color);
+  stroke-width: 2px;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.arrow.a1 { top: 50px; left: 55%; }
+.arrow.a2 { bottom: 10%; right: 30%; }
+
+/* =========================================================
+   SMALL STICKY NOTES NEAR SECOND ARROW
+========================================================= */
+.small-note {
+  position: absolute;
+  font-size: 24px;
+  padding: 8px;
+  background: var(--note-bg);
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+}
+
+.note1 { top: 120%; right: 0%; rotate: 5deg; }
+.note2 { top: 100%; right: 120%; rotate: -3deg; }

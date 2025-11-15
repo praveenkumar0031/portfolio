@@ -1,4 +1,7 @@
 import img from '../myfullpic.jpg';
+import eye from '../stickers/eye.jpg';
+import dev from '../stickers/dev.jpg';
+import mik from '../stickers/mik.jpg';
 export const selfimg = img;
 export const aboutData = {
     intro: "I am a dedicated and analytical Information Technology student with hands-on experience in software development through academic and personal projects. My goal is to leverage my skills in programming and problem-solving to contribute to a forward-thinking organization.",
@@ -6,6 +9,13 @@ export const aboutData = {
     image: {
         src: selfimg,
         alt: "Professional portrait of the developer",
+    },stk:{
+        src1: dev,
+        alt: "developer sticker",
+        src2: mik,
+        alt: "mik sticker",
+        src3: eye,
+        alt: "eye sticker",
     },
 
     competencies: [
