@@ -1,57 +1,103 @@
-/* contact.css */
-.credits{
-  
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  margin-bottom: 40px;
-}
 #contact {
-  padding: 50px 20px;
-  background-color: #4a4e69;
+  padding: 60px 20px;
   text-align: center;
-  height: 100px; 
-  
+  background: var(--bubble-bg);
+  border-top: 5px solid var(--accent-color);
+  position: relative;
+  overflow: hidden;
+  font-family: var(--heading-font);
+}
+
+#contact::before,
+#contact::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: var(--note-bg);
+  border: 4px solid var(--doodle-color);
+  transform: rotate(12deg);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+#contact::before {
+  top: -40px;
+  left: -20px;
+}
+
+#contact::after {
+  bottom: -40px;
+  right: -20px;
+  transform: rotate(-12deg);
 }
 
 #contact h2 {
-  margin-top: -2%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  margin-bottom: 40px;
+  font-size: 2.6rem;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 var(--accent-color);
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
 }
 
 .btn-box {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin: 30px auto;
   flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
 }
 
 .btn-box a {
   display: inline-block;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--note-bg);
+  padding: 15px;
+  border-radius: 12px;
+  border: 4px solid var(--accent-color);
+  box-shadow: 4px 4px 0 var(--secondary-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .btn-box a:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  transform: translateY(-8px) rotate(-3deg);
+  box-shadow: 6px 6px 0 var(--doodle-color);
+}
+
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 50px;
+  height: 18px;
+  background: #fff8b0;
+  border: 2px dashed var(--arrow-color);
+  transform: rotate(-8deg);
+  left: 50%;
+  translate: -50%;
+  opacity: 0.8;
 }
 
 .icon {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 3px solid var(--secondary-color);
 }
 
-.btn-box a:hover .icon {
-  transform: rotate(15deg);
+.credits {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 var(--note-bg);
+  position: relative;
+  z-index: 2;
 }

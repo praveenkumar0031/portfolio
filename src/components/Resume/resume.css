@@ -1,61 +1,133 @@
-/* Resume.css */
-
-/* Container styling */
-#resume {
-  background: #f9fafb; /* light gray background */
-  min-height: 50vh;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.resume-container {
   text-align: center;
-  border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+  position: relative;
 }
 
-/* Heading */
-#resume h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 1.5rem;
+.clickable-title {
+  cursor: pointer;
+  font-size: 2.4rem;
+  font-weight: bold;
+  transition: 0.2s ease;
+  font-family: var(--heading-font);
+  color: var(--secondary-color);
+  text-shadow: 3px 3px 0 var(--accent-color);
 }
 
-/* Download button styling */
-.download-btn {
-  display: inline-flex;
-  align-items: center;
+.clickable-title:hover {
+  transform: scale(1.07) rotate(-1deg);
+}
+
+.back-btn {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent-color);
+  color: #fff;
+  padding: 10px 22px;
+  border: 4px solid var(--text-color);
+  border-radius: 12px;
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 4px 4px 0 var(--text-color);
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  transform: translateX(-50%) translateY(-3px) rotate(-2deg);
+  background: var(--arrow-color);
+  box-shadow: 6px 6px 0 var(--doodle-color);
+}
+
+.resume-card {
+  margin-top: 50px;
+  background: var(--bubble-bg);
+  border: 5px solid var(--accent-color);
+  padding: 20px;
+  width: 85%;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 8px 8px 0 var(--secondary-color);
+  border-radius: 16px;
+  animation: popIn 0.35s ease;
+}
+
+.resume-preview {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.resume-actions {
+  margin-top: 20px;
+  display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  background-color: #4a4e69;
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+  gap: 18px;
+}
+
+.resume-btn {
+  padding: 10px 20px;
+  border: 3px solid var(--text-color);
+  border-radius: 12px;
+  font-family: var(--heading-font);
+  cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 var(--secondary-color);
+  transition: 0.2s ease;
+  color: var(--text-color);
+  font-size: 1.1rem;
 }
 
-.download-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-  background: #4a4e99;
+.resume-btn:hover {
+  transform: translateY(-4px) rotate(-2deg);
+  box-shadow: 6px 6px 0 var(--accent-color);
+  background: var(--accent-color);
 }
 
-/* Optional: Add download arrow animation */
-.download-btn::before {
-  content: "⬇";
+.resume-container {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.clickable-title {
+  cursor: pointer;
   display: inline-block;
-  animation: bounce 1s infinite;
+  padding: 12px 28px;
+  background: var(--note-bg);
+  border: 4px solid var(--accent-color);
+  border-radius: 14px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--heading-font);
+  color: var(--text-color);
+  text-shadow: 2px 2px 0 var(--bubble-bg);
+  box-shadow: 5px 5px 0 var(--secondary-color);
+  transition: 0.25s ease;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
+.clickable-title:hover {
+  transform: translateY(-4px) rotate(-2deg);
+  box-shadow: 7px 7px 0 var(--doodle-color);
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8) translateY(15px);
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-4px);
+
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
   }
 }
