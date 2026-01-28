@@ -1,4 +1,4 @@
-import img from '../myfullpic.jpg';
+import img from '../pro.jpg';
 import eye from '../stickers/eye.jpg';
 import dev from '../stickers/dev.jpg';
 import mik from '../stickers/mik.jpg';
