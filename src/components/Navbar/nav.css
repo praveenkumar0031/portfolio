@@ -114,3 +114,123 @@
         color: #fff;
     }
 }
+/* --- Desktop Adjustments --- */
+.navbar {
+    background: var(--bg-color);
+    padding: 10px 25px; /* Increased padding slightly for better touch targets */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #000; /* Thicker border matches logo */
+    box-shadow: 0 6px 0 #000;
+    font-family: var(--heading-font);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* Removed rotation here to prevent layout shifts on scroll */
+}
+
+.logo {
+    font-size: 1.5rem; /* Slightly smaller for mobile safety */
+    padding: 8px 18px;
+    background: var(--secondary-color);
+    color: #fff;
+    border: 3px solid #000;
+    border-radius: 12px;
+    text-shadow: 2px 2px 0 #000;
+    box-shadow: 4px 4px 0 #000;
+    transform: rotate(-3deg);
+    transition: 0.25s ease-in-out;
+    white-space: nowrap; /* Prevents logo from wrapping */
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Position it fixed to the viewport */
+        position: fixed; 
+        top: 20px;
+        right: 20px;
+        
+        /* Ensure it stays above EVERYTHING (stickers, doodles, sections) */
+        z-index: 2000; 
+        
+        /* Keep your cool Neubrutalist styling */
+        background: var(--accent-color);
+        border: 3px solid #000;
+        box-shadow: 4px 4px 0 #000;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    /* Adjust the menu drawer to line up with the fixed button */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        padding-top: 80px; /* Space for the fixed button area */
+        z-index: 1999; /* Just below the toggle button */
+        
+        /* Animation from your previous step */
+        transform: translateX(110%);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+}
+/* --- Mobile Specific Overrides --- */
+@media screen and (max-width: 768px) {
+    
+    .navbar {
+        transform: none; /* Straighten navbar on mobile for cleaner look */
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 1.2rem; /* Save space for the hamburger icon */
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001; /* Ensure button stays on top of menu */
+    }
+
+    .nav-links {
+        position: fixed; /* Fixed is safer than Absolute for mobile scrolling */
+        top: 80px; /* Distance from top of screen */
+        right: 20px; /* Floats it away from the edge like a sticky note */
+        flex-direction: column;
+        width: 200px;
+        padding: 30px 20px;
+        background: var(--note-bg); /* Use the note background color */
+        border: 4px solid #000;
+        border-radius: 15px; /* Rounded like your other elements */
+        box-shadow: 8px 8px 0 #000;
+        gap: 20px;
+        
+        /* Animation: Slide and Rotate */
+        transform: translateX(150%) rotate(10deg); 
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .nav-links.active {
+        /* Pop in effect with a slight slant to keep the "doodle" vibe */
+        transform: translateX(0) rotate(-2deg);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; /* Ensures padding doesn't break width */
+        font-size: 1.1rem;
+    }
+}

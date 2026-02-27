@@ -1,121 +1,136 @@
+/* --- Root & Global --- */
 :root {
     --comic-bg: #fdf6e3;
-    --title-color: var(--title-color);
     --card-bg: #fff;
     --card-hover-bg: #fffae5;
-    --border-color: var(--border-color);
     --pop-bg: #ffdd00;
-    --title-shadow: #000;
     --subtitle-bg: #00ccff;
     --box-bg: #fff3cd;
     --link-bg: #ff0077;
     --link-hover-bg: #00ff88;
-    --text-color: var(--text-color);
 }
 
-
-
 .project-seg {
-    padding: 40px;
+    padding: 60px 20px;
     background: var(--comic-bg);
     font-family: 'Comic Sans MS', 'Fredoka', cursive;
     color: #222;
+    overflow-x: hidden; /* Prevents "POP!" badge from causing side-scroll */
 }
 
 .my-project {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 8vw, 3rem); /* Responsive font size */
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     color: #ff0077;
-    text-shadow: 3px 3px 0px var(--title-shadow);
-    letter-spacing: 2px;
+    text-shadow: 3px 3px 0px #000;
     transform: rotate(-2deg);
 }
 
+/* --- The Grid --- */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px;
+    /* Default to 1 column for mobile */
+    grid-template-columns: 1fr; 
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Desktop Grid Upgrade */
+@media screen and (min-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+}
+
+/* --- The Card --- */
 .project-card {
     background: var(--card-bg);
-    border: 4px solid var(--border-color);
+    border: 4px solid #000;
     border-radius: 20px;
     padding: 20px;
-    box-shadow: 8px 8px 0px var(--border-color);
-    transition: 0.2s;
+    box-shadow: 8px 8px 0px #000;
+    transition: transform 0.2s ease;
     position: relative;
     transform: rotate(-1deg);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
-    transform: rotate(1deg) scale(1.05);
-    box-shadow: 12px 12px 0px #000;
+    transform: rotate(1deg) scale(1.02);
+    box-shadow: 10px 10px 0px #000;
     background: var(--card-hover-bg);
 }
 
+/* "POP!" Badge - Optimized for Mobile */
 .project-card::after {
     content: "POP!";
     position: absolute;
-    top: -15px;
-    right: -15px;
+    top: -12px;
+    right: 10px;
     background: var(--pop-bg);
-    color: var(--border-color);
-    padding: 5px 10px;
-    font-size: 1.2rem;
+    color: #000;
+    padding: 4px 10px;
+    font-size: 1rem;
     font-weight: bold;
     border: 3px solid #000;
     border-radius: 10px;
     transform: rotate(10deg);
+    z-index: 2;
 }
 
 .title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--link-bg);
     text-shadow: 2px 2px #000;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .thumbnail {
     width: 100%;
-    height: 180px;
+    height: 180px; /* Fixed height for consistency */
     object-fit: cover;
     border: 3px solid #000;
     border-radius: 15px;
-    box-shadow: 6px 6px 0px #000;
+    box-shadow: 5px 5px 0px #000;
     margin-bottom: 15px;
+}
+
+/* --- Info Boxes --- */
+.type-topic, .tech, .des {
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0px #000;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .type-topic {
     background: var(--subtitle-bg);
     display: inline-block;
-    padding: 5px 15px;
-    border-radius: 10px;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0px #000;
-    margin-bottom: 10px;
+    align-self: flex-start;
     font-weight: bold;
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
 }
 
-.tech,
-.des {
+.tech, .des {
     background: var(--box-bg);
-    padding: 10px;
-    border-radius: 10px;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0px #000;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    text-align: left;
 }
 
-.link a,
-.live-link a {
+/* --- Buttons --- */
+.link, .live-link {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+}
+
+.link a, .live-link a {
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 8px 15px;
+    padding: 10px 18px;
     border-radius: 10px;
     border: 3px solid #000;
     background: var(--link-bg);
@@ -125,9 +140,31 @@
     transition: 0.2s;
 }
 
-.link a:hover,
-.live-link a:hover {
-    transform: scale(1.1) rotate(-2deg);
+.link a:hover, .live-link a:hover {
     background: var(--link-hover-bg);
-    color: var(--border-color);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+/* --- Mobile Specific Tweaks --- */
+@media screen and (max-width: 480px) {
+    .project-seg {
+        padding: 40px 15px;
+    }
+    
+    .project-card {
+        transform: rotate(0deg); /* Straighten cards on very small screens */
+        padding: 15px;
+    }
+
+    .thumbnail {
+        height: 160px; /* Slightly shorter for small phones */
+    }
+
+    .link a, .live-link a {
+        width: 80%; /* Make buttons full-width for easier tapping */
+        text-align: center;
+        box-sizing: border-box;
+    }
 }

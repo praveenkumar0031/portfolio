@@ -322,3 +322,53 @@ h2 {
   right: 120%;
   rotate: -3deg;
 }
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+    .about {
+        display: flex;
+        flex-direction: column-reverse; /* Put the Image/Intro at the top, Text below */
+        padding: 40px 15px;
+        align-items: center;
+        overflow: hidden; /* Prevent stickers from breaking the width */
+    }
+
+    /* Stack the boxes */
+    .txt-box, .img-box {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    /* Make the main image responsive */
+    .img-box .box img {
+        width: 100%;
+        height: auto;
+        max-width: 300px; /* Adjust based on your preference */
+        margin: 0 auto;
+    }
+
+    /* Handle the Doodles/Stickers */
+    /* Most decorative absolute elements should be hidden or resized */
+    .sticker, .arrow, .paper-piece {
+        transform: scale(0.6); /* Shrink them so they don't crowd the text */
+    }
+
+    /* Hide specific annoying elements that overlap text on small screens */
+    .arrow {
+        display: none; 
+    }
+
+    .s1 { top: 5%; left: 5%; }
+    .s2 { top: 10%; right: 5%; }
+    
+    /* Ensure the text box is readable */
+    .txt {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .section-title-underline {
+        font-size: 1.5rem;
+    }
+}

@@ -1,43 +1,79 @@
+:root {
+  /* Define your theme variables here if not already in index.css */
+  --bg-color: #f4f4f9;
+  --text-color: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
-  background-color: #f4f4f9;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  width: 100%;
+  /* Prevents stickers/doodles from causing horizontal overflow */
+  overflow-x: hidden; 
+  display: flex;
+  flex-direction: column;
 }
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Section Spacing */
+#home, #about, #resume, #projects, #contact, #skills {
+  padding: 60px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+/* Adjust scroll-margin for sticky navbar so headers don't get hidden */
 #home, #about, #resume, #projects, #contact {
+  scroll-margin-top: 80px;
+}
+
+#skills {
   scroll-margin-top: 100px;
 }
-#skills {
-  scroll-margin-top: 180px;
+
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 768px) {
+  #home, #about, #resume, #projects, #contact, #skills {
+    padding: 40px 15px; /* Tighter padding for small screens */
+    scroll-margin-top: 70px; /* Matches the smaller mobile navbar height */
+  }
+
+  /* Ensure text doesn't hit the very edge of the screen */
+  .App {
+    padding: 0 5px;
+  }
+
+  /* Make typography more readable on mobile */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  p { font-size: 1rem; line-height: 1.5; }
 }
+
+/* Animations */
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App-logo {
+  height: 200px; /* Changed from vmin for more control */
+  pointer-events: none;
+  margin-bottom: 20px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
