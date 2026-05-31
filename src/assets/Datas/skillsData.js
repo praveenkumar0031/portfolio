@@ -1,8 +1,10 @@
 import c from '../skillpics/c.jpeg'
 import java from '../skillpics/java.jpeg'
-//import python from './skillpics/python.jpeg'
-//import html from './skillpics/html.jpeg'
-//import css from './skillpics/css.jpeg'
+import jenkins from '../skillpics/Jenkins.jpg'
+import prom from '../skillpics/Prometheus.jpg'
+import k8s from '../skillpics/k8.jpg'
+import aws from '../skillpics/AWS.jpg'
+import terraform from '../skillpics/Terraform.jpg'
 import js from '../skillpics/javascript.jpeg'
 import react from '../skillpics/react.jpeg'
 import node from '../skillpics/node.jpeg'
@@ -25,9 +27,8 @@ import unbuntu from '../skillpics/ubuntu.jpeg'
 import vscode from '../skillpics/vscode.jpeg'
 export const skillsData = {
   programming: [
-    { name: "C", logo: c },
+    //{ name: "C", logo: c },
     { name: "Java", logo: java },
-    { name: "JavaScript", logo: js },
     //{ name: "Python", logo: python},
     //{ name: "HTML5", logo: html },
     //{ name: "CSS3", logo: css },
@@ -36,25 +37,25 @@ export const skillsData = {
   ],
   technical: [
     { name: "React", logo: react },
-    { name: "Tailwind", logo: tail },
+    
+    
+    { name: "Node.js", logo: node },
+    { name: "Spring Boot", logo: spring },
+    { name: "Docker", logo: docker },
+    {name: "Jenkins", logo: jenkins},
+    {name: "Prometheus", logo: prom},
+    {name: "Kubernetes", logo: k8s},
+    {name: "Terraform", logo: terraform},
     { name: "Webrtc", logo: webtrc },
     { name: "Mysql", logo: mysql },
     { name: "Maven", logo: maven },
-    { name: "Node.js", logo: node },
-    { name: "Spring Boot", logo: spring },
-    { name: "Docker", logo: docker }
 
   ],
 
   platforms: [
     { name: "Ubuntu", logo: unbuntu },
     { name: "Firebase", logo: firebase },
-    { name: "Anaconda", logo: anaconda },
-    { name: "Eclipse", logo: eclipse },
-    { name: "Intellij", logo: intelij },
-    { name: "Vscode", logo: vscode }
-
-
+    { name: "AWS", logo: aws }
   ],
 
   Extra: [

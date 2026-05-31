@@ -1,54 +1,35 @@
 import img from '../suits.jpeg';
-import eye from '../stickers/eye.jpg';
-import dev from '../stickers/dev.jpg';
-import mik from '../stickers/mik.jpg';
+
 export const selfimg = img;
 export const aboutData = {
-    heroTitle: "Praveen Kumar — Software Engineer",
+    heroTitle: "Praveen Kumar S — Software Engineer",
     marqueeText: "Let's Talk • Let's Build • Let's Ship •",
     intro: "I am a dedicated and analytical Information Technology student with hands-on experience in software development through academic and personal projects. My goal is to leverage my skills in programming and problem-solving to contribute to a forward-thinking organization.",
 
     image: {
         src: selfimg,
         alt: "Professional portrait of the developer",
-    },stk:{
-        src1: dev,
-        alt: "developer sticker",
-        src2: mik,
-        alt: "mik sticker",
-        src3: eye,
-        alt: "eye sticker",
     },
 
     competencies: [
-        {
-            title: "Aspiring Software Engineer | React , Java and SQL",
-            type: "main-title"
-        },
-        {
-            title: "My core competencies include:",
-            type: "section-title"
-        },
+        
+        
         {
             title: "Backend Development:",
-            details: "Proficient in Java and SQL, demonstrated by building a Java Stack Task-manager,chat-app,video-calling,console-based banking application with MySQL for data management.",
+            details: "Proficient in Java and SQL, demonstrated by building a Java Stack Task-manager,kafka based stock monitoring system using Java SpringBoot,chat-app,video-calling,console-based banking application with MySQL for data management.",
             type: "skill-area"
         },
         {
-            title: "Web Technologies:",
-            details: "Familiar with front-end (React, HTML, CSS, JS) and back-end (Java SpringBoot) REST api development for creating interactive applications and data management. Developed a production ready Containers using docker.",
+            title: "MERN Technologies:",
+            details: "Familiar with front-end React and back-end (Node js,Express) REST api development with JWT authentication and rate limiting and MongoDB for creating interactive production ready applications .",
             type: "skill-area"
         },
         {
             title: "Product Deployment:",
-            details: "Had Experience with platforms like linux ,docker ",
+            details: "Had Experience with devops tools like GitHub,Jenkins,docker,kubernetes and cloudplatforms like aws with terraform and monitoring tools like prometheus and grafana for tracking server metrics.",
             type: "skill-area"
         },
-        {
-            title: "Developer Tools:",
-            details: "Experienced with Linux(unbuntu), Git, Eclipse, Docker.",
-            type: "skill-area"
-        },
+        
     ]
 };
 

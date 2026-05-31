@@ -23,3 +23,69 @@
   font-size: 24px;
   transition: all 0.5s cubic-bezier(0, 0, 0, 1);
 }
+
+/* Inner Arrow Circle */
+.inner-circle-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none;
+  color: var(--text-global,currentColor);
+  transition: color 0.3s ease;
+}
+
+.inner-circle-link:hover {
+  color: black;
+}
+
+.inner-circle-outer {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: black;
+  border-radius: 50%;
+  animation: rotate-circle 8s linear infinite;
+}
+
+.inner-circle-inner {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(64, 179, 255, 0.16);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(64, 179, 255, 0.08);
+  animation: rotate-circle-reverse 8s linear infinite;
+  backdrop-filter: blur(8px);
+}
+
+.inner-circle-inner svg {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes rotate-circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-circle-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

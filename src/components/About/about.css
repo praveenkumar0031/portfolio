@@ -1,25 +1,24 @@
 ﻿:root {
-  --section-gap: 44px;
+  --section-gap: 46px;
   --panel-radius: 32px;
 }
 
 .about-section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 88px 24px 120px;
+  padding: 92px 24px 120px;
   display: grid;
   gap: var(--section-gap);
 }
 
 .hero-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(340px, 520px);
-  gap: 40px;
+  grid-template-columns: 1.2fr minmax(320px, 520px);
+  gap: 42px;
   align-items: center;
 }
 
 .hero-copy {
-  max-width: 680px;
   display: grid;
   gap: 24px;
 }
@@ -33,19 +32,19 @@
 }
 
 .hero-panel h1 {
-  font-size: clamp(3.5rem, 6vw, 5.8rem);
-  line-height: 0.96;
+  font-size: clamp(3.5rem, 2vw, 5.8rem);
+  line-height: 0.9;
   margin: 0;
-  letter-spacing: -0.04em;
+  
   color: var(--text-global);
 }
 
 .hero-text {
   max-width: 640px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.9;
   color: var(--muted-global);
-  margin-top: 20px;
+  margin-top: 6px;
 }
 
 .hero-visuals {
@@ -55,11 +54,12 @@
 
 .hero-visuals-frame {
   position: relative;
-  width: 100%;
+  width: 70%;
   min-height: 420px;
   border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 40px 120px rgba(15,23,42,0.18);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.08));
+  box-shadow: 0 40px 120px rgba(0,0,0,0.25);
 }
 
 .image-panel {
@@ -77,7 +77,7 @@
 .hero-circle-wrapper {
   position: absolute;
   right: -28px;
-  bottom: -28px;
+  bottom: 0px;
   width: min(220px, 38vw);
   max-width: 230px;
   pointer-events: none;
@@ -86,8 +86,8 @@
 
 .hero-marquee {
   overflow: hidden;
-  border-top: 1px solid rgba(148,163,184,0.18);
-  border-bottom: 1px solid rgba(148,163,184,0.18);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   padding: 20px 0;
 }
 
@@ -101,7 +101,7 @@
 .marquee-track span {
   font-size: 0.92rem;
   font-weight: 700;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
   color: var(--accent-global);
   text-transform: uppercase;
 }
@@ -129,14 +129,14 @@
 
 .about-card {
   padding: 30px;
-  background: var(--surface);
-  border: 1px solid var(--border-global);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: var(--panel-radius);
   color: var(--muted-global);
 }
 
 .about-card-strong {
-  border-color: rgba(37,99,235,0.18);
+  border-color: rgba(64,179,255,0.18);
   color: var(--text-global);
 }
 
@@ -160,7 +160,7 @@
 .image-panel {
   border-radius: 34px;
   overflow: hidden;
-  box-shadow: 0 34px 90px rgba(15, 23, 42, 0.18);
+  box-shadow: 0 34px 90px rgba(0,0,0,0.22);
 }
 
 .image-panel img {
@@ -171,8 +171,8 @@
 
 .about-note {
   padding: 30px;
-  background: var(--surface);
-  border: 1px solid var(--border-global);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 30px;
   color: var(--muted-global);
   line-height: 1.85;
@@ -182,13 +182,13 @@
   .about-grid {
     grid-template-columns: 1fr;
   }
-
-  .hero-visuals {
-    min-height: auto;
-  }
 }
 
 @media (max-width: 640px) {
+  .hero-panel {
+    grid-template-columns: 1fr;
+  }
+
   .hero-panel h1 {
     font-size: clamp(2.8rem, 14vw, 4.6rem);
   }
@@ -196,10 +196,5 @@
   .hero-text,
   .about-note {
     font-size: 0.98rem;
-  }
-
-  .hero-circle {
-    width: 160px;
-    max-width: 160px;
   }
 }

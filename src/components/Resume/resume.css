@@ -40,14 +40,14 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--border-global);
+  background: rgba(255,255,255,0.08);
 }
 
 .timeline-card {
   position: relative;
   padding: 28px 32px 28px 40px;
-  background: var(--surface);
-  border: 1px solid var(--border-global);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 32px;
   box-shadow: var(--shadow-global);
   transition: transform 220ms ease, box-shadow 220ms ease;
@@ -135,7 +135,7 @@
 .resume-btn.outline {
   background: transparent;
   color: var(--text-global);
-  border: 1px solid var(--border-global);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 @media (max-width: 740px) {

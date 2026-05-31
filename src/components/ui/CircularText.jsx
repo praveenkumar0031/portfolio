@@ -89,6 +89,41 @@ const CircularText = ({ text, spinDuration = 20, onHover = 'speedUp', className 
       onMouseEnter={handleHoverStart}
       onMouseLeave={handleHoverEnd}
     >
+      <motion.a
+        href="https://github.com/praveenkumar0031"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inner-circle-link"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <div className="inner-circle-outer"></div>
+        
+        <div className="inner-circle-inner">
+            <a href="https://github.com/praveenkumar0031">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <path
+                d="M7 17L17 7"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M9 7H17V15"
+                stroke="white"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            </a>
+        </div>
+      </motion.a>
       {letters.map((letter, i) => {
         const rotationDeg = (360 / letters.length) * i;
         const factor = Math.PI / letters.length;

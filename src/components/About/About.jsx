@@ -35,7 +35,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="about-section">
+    <section id="home" className="about-section">
       <div className="hero-panel">
         <div className="hero-copy">
           <p className="hero-label">ABOUT</p>
@@ -65,11 +65,19 @@ export default function About() {
 
       <div className="about-grid">
         <div className="about-copy">{renderCompetencies()}</div>
-
         <aside className="about-side">
-          
           <div className="about-note">
-            <p>{intro}</p>
+            <p>
+              I build dependable software with a strong focus on backend systems, clean API design, and deployment readiness. My work is guided by practical engineering, user clarity, and System architecture. I also had some Microservices experience with springboot and docker and I am eager to expand my expertise in this area.
+            </p>
+          </div>
+          <div className="about-card">
+            <h4>What I bring</h4>
+            <ul className="about-bullets">
+              <li>Reliable full-stack development using React,Java/Node, SQL/Mongodb, and Docker with aws for hosting</li>
+              <li>Clean architecture with production-ready deployment patterns</li>
+              <li>Fast learning, strong organization, and team-first communication</li>
+            </ul>
           </div>
         </aside>
       </div>

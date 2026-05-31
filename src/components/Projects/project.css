@@ -1,7 +1,7 @@
 ﻿.project-seg {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 88px 24px 120px;
+  padding: 92px 24px 120px;
   display: grid;
   gap: 34px;
 }
@@ -27,9 +27,8 @@
 
 .project-grid {
   display: grid;
-  align-items: stretch;
   gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .project-card {
@@ -38,14 +37,44 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
   border-radius: 32px;
-  background: var(--surface);
-  border: 1px solid var(--border-global);
-  transition: transform 220ms ease, box-shadow 220ms ease;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 32px 80px rgba(15,23,42,0.16);
+  box-shadow: 0 32px 90px rgba(0,0,0,0.22);
+}
+
+.project-card.collapsed .project-card-inner {
+  gap: 16px;
+  padding: 28px;
+}
+
+.project-card.collapsed .project-type {
+  display: none;
+}
+
+.project-card .project-details {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 280ms ease, opacity 220ms ease;
+}
+
+.project-card.expanded .project-details {
+  max-height: 900px;
+  opacity: 1;
+}
+
+.project-card.collapsed .project-title {
+  font-size: 1.35rem;
+}
+
+.project-actions a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
 }
 
 .project-index {
@@ -54,7 +83,7 @@
   left: 24px;
   font-size: 3.8rem;
   line-height: 0.88;
-  color: rgba(37,99,235,0.16);
+  color: rgba(64,179,255,0.16);
   font-weight: 900;
 }
 
@@ -87,14 +116,19 @@
 .thumbnail-wrap {
   overflow: hidden;
   border-radius: 28px;
-  border: 1px solid var(--border-global);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .thumbnail {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
   display: block;
+  transition: transform 300ms ease;
+}
+
+.project-card:hover .thumbnail {
+  transform: scale(1.05);
 }
 
 .project-meta {
@@ -130,7 +164,7 @@
 .project-actions a.secondary {
   background: transparent;
   color: var(--text-global);
-  border: 1px solid var(--border-global);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .project-actions a:hover {
@@ -138,9 +172,30 @@
   filter: brightness(1.08);
 }
 
+.project-toggle-row {
+  display: grid;
+  place-items: center;
+}
+
+.show-more-btn {
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--text-global);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.show-more-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.12);
+}
+
 @media (max-width: 720px) {
   .project-seg {
-    padding: 70px 18px 100px;
+    padding: 72px 18px 100px;
   }
 
   .thumbnail {
@@ -153,3 +208,109 @@
     font-size: 3rem;
   }
 }
+
+/* Modal / Overlay styles */
+body.modal-open {
+  overflow: hidden;
+}
+
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(6, 10, 18, 0.6);
+  backdrop-filter: blur(6px) saturate(1.05);
+  z-index: 1200;
+  opacity: 0;
+  animation: overlayFadeIn 220ms ease forwards;
+}
+
+/* Light theme overlay: keep readability when theme is light */
+html.light .project-modal-overlay,
+html[data-theme="light"] .project-modal-overlay {
+  background: rgba(255,255,255,0.6);
+}
+
+@keyframes overlayFadeIn {
+  to { opacity: 1; }
+}
+
+.project-modal {
+  width: min(100%, 980px);
+  margin: 28px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border-global);
+  box-shadow: var(--shadow-global);
+  transform: translateY(6px) scale(0.98);
+  opacity: 0;
+  animation: modalIn 260ms cubic-bezier(.2,.9,.3,1) forwards;
+  max-height: calc(100vh - 80px);
+  overflow: hidden;
+  color: var(--text-global);
+}
+
+@keyframes modalIn {
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.project-modal-close {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.03);
+  color: var(--text-global);
+  font-size: 22px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.project-modal-content {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 20px;
+}
+
+.modal-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-body {
+  padding: 26px 28px;
+  overflow: auto;
+  color: var(--text-global);
+}
+
+.modal-title {
+  margin: 0 0 6px 0;
+  font-size: 1.6rem;
+  color: var(--text-global);
+}
+.modal-type { color: var(--accent-global); margin-bottom: 10px; }
+.modal-desc { color: var(--muted-global); margin-bottom: 14px; }
+.modal-meta { color: var(--muted-global); margin-bottom: 14px; }
+.modal-features h4 { margin: 8px 0; color: var(--text-global); }
+.modal-features ul { margin: 0 0 16px 18px; color: var(--muted-global); }
+
+.modal-actions { display:flex; gap:12px; margin-top: 12px; }
+.modal-actions .btn { padding:10px 16px; border-radius: 999px; background: var(--accent-global); color:#fff; text-decoration:none; font-weight:700; }
+.modal-actions .btn.secondary { background: transparent; color: var(--text-global); border:1px solid var(--border-global); }
+
+/* Responsive: stack content on small screens */
+@media (max-width: 900px) {
+  .project-modal-content { grid-template-columns: 1fr; }
+  .project-modal { width: calc(100% - 36px); }
+  .project-modal-close { right: 10px; top: 8px; }
+}
+
+/* Modal close animation on unmount handled by React; add smooth transitions for overlay disappear via opacity */
+

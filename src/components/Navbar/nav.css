@@ -1,28 +1,21 @@
 ﻿:root {
-  --nav-height: 82px;
+  --nav-height: 78px;
 }
 
 .site-nav {
   position: sticky;
   top: 0;
   z-index: 1200;
-  backdrop-filter: blur(20px);
-  background: rgba(249,250,251,0.94);
-  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
-  border-bottom: 1px solid var(--border-global);
-  transition: background 240ms ease, border-color 240ms ease;
-}
-
-html.dark .site-nav {
-  background: rgba(7, 10, 18, 0.94);
-  border-color: rgba(148,163,184,0.12);
+  backdrop-filter: blur(18px);
+  background: rgba(8, 14, 28, 0.92);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-shell {
   max-width: var(--max-width);
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   gap: 18px;
   padding: 0 24px;
@@ -43,11 +36,11 @@ html.dark .site-nav {
   height: 46px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--border-global);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 16px;
   font-size: 0.95rem;
   color: var(--text-global);
-  background: var(--surface);
+  background: rgba(255,255,255,0.05);
 }
 
 .brand-label {
@@ -64,7 +57,6 @@ html.dark .site-nav {
   gap: 16px;
   flex-wrap: wrap;
   padding: 8px 0;
-  width: 40%;
 }
 
 .dock-item,
@@ -74,15 +66,15 @@ html.dark .site-nav {
   color: var(--muted-global);
   cursor: pointer;
   font-weight: 700;
-  padding: 10px 12px;
+  padding: 10px 14px;
   border-radius: 14px;
-  transition: color 180ms ease, transform 180ms ease;
+  transition: color 180ms ease, transform 180ms ease, background 180ms ease;
 }
 
 .dock-item:hover,
 .mobile-dock-item:hover {
   color: var(--text-global);
-  background: var(--accent-soft);
+  background: rgba(64,179,255,0.14);
   transform: translateY(-1px);
 }
 
@@ -93,8 +85,8 @@ html.dark .site-nav {
 }
 
 .theme-toggle {
-  border: 1px solid var(--border-global);
-  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
   color: var(--text-global);
   font-weight: 700;
   padding: 10px 16px;
@@ -105,7 +97,7 @@ html.dark .site-nav {
 
 .theme-toggle:hover {
   transform: translateY(-2px);
-  background: var(--accent-soft);
+  background: rgba(64,179,255,0.14);
 }
 
 .menu-btn {
@@ -115,8 +107,8 @@ html.dark .site-nav {
   flex-direction: column;
   justify-content: center;
   gap: 7px;
-  background: var(--surface);
-  border: 1px solid var(--border-global);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 16px;
   padding: 8px;
   cursor: pointer;
@@ -150,11 +142,11 @@ html.dark .site-nav {
   left: 0;
   right: 0;
   width: 100%;
-  background: var(--surface);
-  border-top: 1px solid var(--border-global);
+  background: rgba(8, 14, 28, 0.98);
+  border-top: 1px solid rgba(255,255,255,0.08);
   padding: 18px 24px 22px;
   gap: 12px;
-  box-shadow: 0 20px 60px rgba(15,23,42,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
 }
 
 .mobile-dock.visible {

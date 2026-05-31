@@ -7,6 +7,7 @@ import About from "./components/About/About";
 import Skill from "./components/Skills/Skill";
 import Resume from "./components/Resume/Resume";
 import Contactlink from "./components/Contact/Contactlink";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -39,7 +40,8 @@ function App() {
         <Project />
         <Skill />
         <Resume />
-        <Contactlink />
+        
+        <Footer />
       </main>
 
       <button
