@@ -1,9 +1,11 @@
-import img from '../pro.jpg';
+import img from '../suits.jpeg';
 import eye from '../stickers/eye.jpg';
 import dev from '../stickers/dev.jpg';
 import mik from '../stickers/mik.jpg';
 export const selfimg = img;
 export const aboutData = {
+    heroTitle: "Praveen Kumar — Software Engineer",
+    marqueeText: "Let's Talk • Let's Build • Let's Ship •",
     intro: "I am a dedicated and analytical Information Technology student with hands-on experience in software development through academic and personal projects. My goal is to leverage my skills in programming and problem-solving to contribute to a forward-thinking organization.",
 
     image: {

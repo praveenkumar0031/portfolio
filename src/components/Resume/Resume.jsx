@@ -1,71 +1,43 @@
-import React, { useState } from "react";
-import resume from "../../assets/resume.pdf";
-import "./resume.css";
+﻿import "./resume.css";
+import resumeFile from "../../assets/resume.pdf";
+import { resumeTimeline } from "../../assets/Datas/resumeData";
 
-const Resume = () => {
-  const [open, setOpen] = useState(false);
-  const resumeLink = resume;
-
+export default function Resume() {
   return (
-    <div id="resume" className="resume-container">
+    <section id="resume" className="resume-section">
+      <div className="resume-header">
+        <p className="resume-label">Timeline</p>
+        <h2>Experience & Education</h2>
+      </div>
 
-      {/* Top heading */}
-      {!open && (
-        <h2
-          className="resume-title clickable-title"
-          onClick={() => setOpen(true)}
-        >
-          My Resume
-        </h2>
-      )}
+      <div className="resume-timeline">
+        {resumeTimeline.map((entry, index) => (
+          <article className="timeline-card" key={entry.id || index}>
+            <div className="timeline-marker">{String(index + 1).padStart(2, "0")}</div>
+            <div className="timeline-content">
+              <div className="timeline-top">
+                <h3>{entry.title}</h3>
+                <span className="timeline-period">{entry.start} — {entry.end}</span>
+              </div>
+              <p className="timeline-org">{entry.organization} · {entry.location}</p>
+              <ul>
+                {entry.bullets.map((bullet, bulletIndex) => (
+                  <li key={bulletIndex}>{bullet}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
 
-      {/* Floating Back Button */}
-      {open && (
-        <button className="back-btn" onClick={() => setOpen(false)}>
-          ← Back
-        </button>
-      )}
-
-      {/* Resume Card */}
-      {open && (
-        <div className="resume-card">
-          <iframe
-            src={resumeLink}
-            title="Resume Preview"
-            className="resume-preview"
-          ></iframe>
-
-          <div className="resume-actions">
-            <a
-              href={resumeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="resume-btn view"
-            >
-              👀 View
-            </a>
-
-            <a
-              href={resumeLink}
-              download="Praveen_Kumar_Resume.pdf"
-              className="resume-btn download"
-            >
-              ⬇ Download
-            </a>
-
-            <a
-              href="https://drive.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="resume-btn drive"
-            >
-              📁 Drive
-            </a>
-          </div>
-        </div>
-      )}
-    </div>
+      <div className="resume-actions">
+        <a className="resume-btn" href={resumeFile} target="_blank" rel="noopener noreferrer">
+          View Resume
+        </a>
+        <a className="resume-btn outline" href={resumeFile} download="Resume.pdf">
+          Download Resume
+        </a>
+      </div>
+    </section>
   );
-};
-
-export default Resume;
+}

@@ -1,33 +1,27 @@
 import { skillsData } from "../../assets/Datas/skillsData";
 import "./skill.css";
 
-const SkillCategory = ({ title, skills }) => (
-    
-    <div  className="skill-category">
-        <h4 >{title}</h4>
-        <div className="skills-grid">
-            {skills.map((skill, index) => (
-                <div className="skill-item" key={index}>
-                    <img src={skill.logo} alt={skill.name} />
-                    <span>{skill.name}</span>
-                </div>
-            ))}
-        </div>
-    </div>
-);
-
 export default function Skills() {
-    return (
-        <div id="skills">
-        <div className="skill-seg">
-            <h2  className="skill-cat">Skills</h2>
-            <section className="skills-section">
+  const items = Object.values(skillsData).flat();
+  const marqueeItems = items.concat(items);
 
-                {Object.entries(skillsData).map(([category, skills]) => (
-                    <SkillCategory key={category} title={category} skills={skills} />
-                ))}
-            </section>
+  return (
+    <section id="skills" className="skills-section">
+      <div className="skills-header">
+        <p className="skills-label">Tech Stack</p>
+        <h2>Skills</h2>
+      </div>
+
+      <div className="marquee-wrapper" aria-label="Tech stack carousel">
+        <div className="marquee-track" aria-hidden="true">
+          {marqueeItems.map((skill, idx) => (
+            <div className="marquee-item" key={`${skill.name}-${idx}`}>
+              <img src={skill.logo} alt={skill.name} />
+              <span>{skill.name}</span>
+            </div>
+          ))}
         </div>
-        </div>
-    );
+      </div>
+    </section>
+  );
 }

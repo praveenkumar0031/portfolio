@@ -1,0 +1,50 @@
+.dock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dock-list {
+  width: 100%;
+  max-width: 740px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.dock-list li {
+  margin: 0;
+}
+
+.dock-item {
+  border: none;
+  background: transparent;
+  color: var(--muted-global);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, color 180ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dock-item:hover,
+.dock-item:focus-visible {
+  background: var(--accent-soft);
+  border-color: var(--accent-global);
+  transform: translateY(-2px);
+}
+
+.dock-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+}

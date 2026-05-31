@@ -1,55 +1,55 @@
-import './project.css';
+﻿import "./project.css";
 import { projects } from "../../assets/Datas/projectsData";
 
-function Project() {
+export default function Project() {
   return (
-    <div id="projects" className="project-seg">
-      <h2 className="my-project">Showcasing My Projects</h2>
-      <div className="projects">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <h3 className="title">{project.title}</h3>
+    <section id="projects" className="project-seg">
+      <div className="project-header">
+        <p className="project-label">Selected work</p>
+        <h2>Projects</h2>
+      </div>
 
-            <img
-              className="thumbnail"
-              src={project.url}
-              alt={project.title + " thumbnail"}
-            />
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <article className="project-card" key={project.id || index}>
+            <div className="project-index">{String(index + 1).padStart(2, "0")}</div>
+            <div className="project-card-inner">
+              <div className="project-top">
+                {project.type && <p className="project-type">{project.type}</p>}
+                <h3 className="project-title">{project.title}</h3>
+              </div>
 
-            {project.type && (
-              <h4 className="type-topic">{project.type} Project</h4>
-            )}
+              {project.url && (
+                <div className="thumbnail-wrap">
+                  <img className="thumbnail" src={project.url} alt={`${project.title} thumbnail`} />
+                </div>
+              )}
 
-            <div className="tech">
-              <strong>Technologies:</strong> {project.tech}
+              <div className="project-meta">
+                <p>
+                  <strong>Technologies:</strong> {project.tech}
+                </p>
+                <p>
+                  <strong>Project Details:</strong> {project.des}
+                </p>
+              </div>
+
+              <div className="project-actions">
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
+                )}
+                {project.live && (
+                  <a className="secondary" href={project.live} target="_blank" rel="noopener noreferrer">
+                    Live
+                  </a>
+                )}
+              </div>
             </div>
-
-            <div className="des">
-              <strong>Project Details:</strong> {project.des}
-            </div>
-
-            <p className="link">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                Check Out
-              </a>
-            </p>
-
-            {project.live && (
-              <p className="live-link">
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LIVE
-                </a>
-              </p>
-            )}
-          </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
-
-export default Project;

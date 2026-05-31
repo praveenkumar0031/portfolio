@@ -1,236 +1,172 @@
-.navbar {
-    background: var(--bg-color);
-    padding: 1px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #000;
-    box-shadow: 0 8px 0 #000;
-    font-family: var(--heading-font);
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    transform: rotate(-0.7deg);
+﻿:root {
+  --nav-height: 82px;
 }
 
-.logo {
-    font-size: 2rem;
-    padding: 8px 18px;
-    background: var(--secondary-color);
-    color: #fff;
-    border: 4px solid #000;
-    border-radius: 14px;
-    text-shadow: 3px 3px 0 #000;
-    box-shadow: 6px 6px 0 #000;
-    transform: rotate(-3deg);
-    transition: 0.25s ease-in-out;
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+  backdrop-filter: blur(20px);
+  background: rgba(249,250,251,0.94);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+  border-bottom: 1px solid var(--border-global);
+  transition: background 240ms ease, border-color 240ms ease;
 }
 
-.logo:hover {
-    transform: rotate(3deg) scale(1.08);
-    background: var(--accent-color);
+html.dark .site-nav {
+  background: rgba(7, 10, 18, 0.94);
+  border-color: rgba(148,163,184,0.12);
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    transition: 0.3s ease;
+.nav-shell {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 18px;
+  padding: 0 24px;
+  min-height: var(--nav-height);
+  width: 100%;
 }
 
-.nav-links li {
-    transform: rotate(-1deg);
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
-.nav-links a {
-    text-decoration: none;
-    padding: 8px 16px;
-    background: var(--bubble-bg);
-    border: 3px solid #000;
-    border-radius: 12px;
-    color: var(--text-color);
-    font-size: 1.15rem;
-    font-weight: bold;
-    box-shadow: 4px 4px 0 #000;
-    transition: 0.25s ease-in-out;
+.brand-mark {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-global);
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: var(--text-global);
+  background: var(--surface);
 }
 
-.nav-links a:hover {
-    background: var(--accent-color);
-    color: #fff;
-    transform: scale(1.12) rotate(2deg);
-    box-shadow: 6px 6px 0 #000;
+.brand-label {
+  color: var(--text-global);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.35em;
 }
 
-.menu-toggle {
+.dock-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  width: 40%;
+}
+
+.dock-item,
+.mobile-dock-item {
+  border: none;
+  background: transparent;
+  color: var(--muted-global);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 14px;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.dock-item:hover,
+.mobile-dock-item:hover {
+  color: var(--text-global);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border-global);
+  background: var(--surface);
+  color: var(--text-global);
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  background: var(--accent-soft);
+}
+
+.menu-btn {
+  width: 48px;
+  height: 44px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  background: var(--surface);
+  border: 1px solid var(--border-global);
+  border-radius: 16px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--text-global);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.menu-btn.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-dock {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--surface);
+  border-top: 1px solid var(--border-global);
+  padding: 18px 24px 22px;
+  gap: 12px;
+  box-shadow: 0 20px 60px rgba(15,23,42,0.08);
+}
+
+.mobile-dock.visible {
+  display: grid;
+}
+
+@media (max-width: 860px) {
+  .dock-bar {
     display: none;
-    background: var(--accent-color);
-    border: 3px solid #000;
-    color: #fff;
-    padding: 8px 12px;
-    font-size: 1.5rem;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 4px 4px 0 #000;
-    transition: 0.25s ease;
-}
+  }
 
-.menu-toggle.active {
-    background: var(--secondary-color);
-    transform: rotate(-6deg);
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 70px;
-        right: 0;
-        flex-direction: column;
-        width: 230px;
-        padding: 20px;
-        background: var(--bg-color);
-        border-left: 4px solid #000;
-        border-bottom: 4px solid #000;
-        box-shadow: -6px 6px 0 #000;
-        gap: 18px;
-        transform: translateX(120%);
-    }
-
-    .nav-links.active {
-        transform: translateX(0);
-    }
-
-    .nav-links a {
-        background: var(--note-bg);
-        color: #000;
-    }
-
-    .nav-links a:hover {
-        background: var(--doodle-color);
-        color: #fff;
-    }
-}
-/* --- Desktop Adjustments --- */
-.navbar {
-    background: var(--bg-color);
-    padding: 10px 25px; /* Increased padding slightly for better touch targets */
+  .menu-btn {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 4px solid #000; /* Thicker border matches logo */
-    box-shadow: 0 6px 0 #000;
-    font-family: var(--heading-font);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    /* Removed rotation here to prevent layout shifts on scroll */
-}
-
-.logo {
-    font-size: 1.5rem; /* Slightly smaller for mobile safety */
-    padding: 8px 18px;
-    background: var(--secondary-color);
-    color: #fff;
-    border: 3px solid #000;
-    border-radius: 12px;
-    text-shadow: 2px 2px 0 #000;
-    box-shadow: 4px 4px 0 #000;
-    transform: rotate(-3deg);
-    transition: 0.25s ease-in-out;
-    white-space: nowrap; /* Prevents logo from wrapping */
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-        /* Position it fixed to the viewport */
-        position: fixed; 
-        top: 20px;
-        right: 20px;
-        
-        /* Ensure it stays above EVERYTHING (stickers, doodles, sections) */
-        z-index: 2000; 
-        
-        /* Keep your cool Neubrutalist styling */
-        background: var(--accent-color);
-        border: 3px solid #000;
-        box-shadow: 4px 4px 0 #000;
-        padding: 10px;
-        border-radius: 12px;
-    }
-
-    /* Adjust the menu drawer to line up with the fixed button */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 250px;
-        padding-top: 80px; /* Space for the fixed button area */
-        z-index: 1999; /* Just below the toggle button */
-        
-        /* Animation from your previous step */
-        transform: translateX(110%);
-        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .nav-links.active {
-        transform: translateX(0);
-    }
-}
-/* --- Mobile Specific Overrides --- */
-@media screen and (max-width: 768px) {
-    
-    .navbar {
-        transform: none; /* Straighten navbar on mobile for cleaner look */
-        padding: 10px 15px;
-    }
-
-    .logo {
-        font-size: 1.2rem; /* Save space for the hamburger icon */
-    }
-
-    .menu-toggle {
-        display: block;
-        z-index: 1001; /* Ensure button stays on top of menu */
-    }
-
-    .nav-links {
-        position: fixed; /* Fixed is safer than Absolute for mobile scrolling */
-        top: 80px; /* Distance from top of screen */
-        right: 20px; /* Floats it away from the edge like a sticky note */
-        flex-direction: column;
-        width: 200px;
-        padding: 30px 20px;
-        background: var(--note-bg); /* Use the note background color */
-        border: 4px solid #000;
-        border-radius: 15px; /* Rounded like your other elements */
-        box-shadow: 8px 8px 0 #000;
-        gap: 20px;
-        
-        /* Animation: Slide and Rotate */
-        transform: translateX(150%) rotate(10deg); 
-        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    
-    .nav-links.active {
-        /* Pop in effect with a slight slant to keep the "doodle" vibe */
-        transform: translateX(0) rotate(-2deg);
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: block;
-        width: 100%;
-        box-sizing: border-box; /* Ensures padding doesn't break width */
-        font-size: 1.1rem;
-    }
+  }
 }

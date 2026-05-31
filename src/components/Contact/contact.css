@@ -1,103 +1,124 @@
-#contact {
-  padding: 60px 20px;
-  text-align: center;
-  background: var(--bubble-bg);
-  border-top: 5px solid var(--accent-color);
-  position: relative;
-  overflow: hidden;
-  font-family: var(--heading-font);
+﻿.contact-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 88px 24px 120px;
+  display: grid;
+  gap: 40px;
 }
 
-#contact::before,
-#contact::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: var(--note-bg);
-  border: 4px solid var(--doodle-color);
-  transform: rotate(12deg);
-  opacity: 0.25;
-  z-index: 0;
+.contact-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) auto;
+  align-items: center;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border-global);
+  border-radius: 32px;
+  padding: 42px 44px;
+  box-shadow: var(--shadow-global);
 }
 
-#contact::before {
-  top: -40px;
-  left: -20px;
+.contact-label {
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--accent-global);
+  margin: 0 0 18px;
+  font-size: 0.82rem;
 }
 
-#contact::after {
-  bottom: -40px;
-  right: -20px;
-  transform: rotate(-12deg);
+.contact-hero h2 {
+  margin: 0;
+  font-size: clamp(3.2rem, 6vw, 5rem);
+  line-height: 0.98;
+  color: var(--text-global);
 }
 
-#contact h2 {
-  font-size: 2.6rem;
-  letter-spacing: 2px;
-  text-shadow: 3px 3px 0 var(--accent-color);
-  color: var(--secondary-color);
-  margin-bottom: 25px;
-  position: relative;
-  z-index: 2;
+.contact-description {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted-global);
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-.btn-box {
-  display: flex;
+.cta-button {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin: 30px auto;
+  padding: 20px 34px;
+  border-radius: 999px;
+  background: var(--accent-global);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.98rem;
+  box-shadow: 0 28px 80px rgba(15,23,42,0.16);
+  transition: transform 180ms ease, filter 180ms ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.contact-footer {
+  display: grid;
+  gap: 22px;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--border-global);
+}
+
+.contact-footer-copy {
+  margin: 0;
+  color: var(--muted-global);
+  font-size: 0.95rem;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 18px;
   flex-wrap: wrap;
-  z-index: 2;
-  position: relative;
 }
 
-.btn-box a {
-  display: inline-block;
-  background: var(--note-bg);
-  padding: 15px;
-  border-radius: 12px;
-  border: 4px solid var(--accent-color);
-  box-shadow: 4px 4px 0 var(--secondary-color);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-  position: relative;
+.icon-link {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-global);
+  transition: transform 180ms ease, background 180ms ease;
 }
 
-.btn-box a:hover {
-  transform: translateY(-8px) rotate(-3deg);
-  box-shadow: 6px 6px 0 var(--doodle-color);
+.icon-link img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
-.btn-box a::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  width: 50px;
-  height: 18px;
-  background: #fff8b0;
-  border: 2px dashed var(--arrow-color);
-  transform: rotate(-8deg);
-  left: 50%;
-  translate: -50%;
-  opacity: 0.8;
+.icon-link:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.12);
 }
 
-.icon {
-  width: 65px;
-  height: 65px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 3px solid var(--secondary-color);
+@media (max-width: 840px) {
+  .contact-hero {
+    grid-template-columns: 1fr;
+  }
 }
 
-.credits {
-  margin-top: 40px;
-  font-size: 1.1rem;
-  color: var(--text-color);
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 0 var(--note-bg);
-  position: relative;
-  z-index: 2;
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 80px 20px 90px;
+  }
+
+  .contact-hero {
+    padding: 30px 24px;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 100%;
+  }
 }
