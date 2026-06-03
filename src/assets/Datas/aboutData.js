@@ -30,6 +30,17 @@ export const aboutData = {
             type: "skill-area"
         },
         
+    ],
+    sidebar:[
+        {title:"",
+        details: "I build dependable software with a strong focus on backend systems, clean API design, and deployment readiness. My work is guided by practical engineering, user clarity, and System architecture. I also had some Microservices experience with springboot and docker and I am eager to expand my expertise in this area."
+        },{
+            title:"What I bring",
+            details:["Reliable full-stack development using React,Java/Node, SQL/Mongodb, and Docker with aws for hosting",
+              "Clean architecture with production-ready deployment patterns",
+              "Fast learning, strong organization, and team-first communication"
+                ]
+        }
     ]
 };
 

@@ -26,9 +26,15 @@ import ps from '../skillpics/ps.jpeg'
 import unbuntu from '../skillpics/ubuntu.jpeg'
 import vscode from '../skillpics/vscode.jpeg'
 export const skillsData = {
-  programming: [
+  Devopstools: [
     //{ name: "C", logo: c },
-    { name: "Java", logo: java },
+    
+    { name: "Docker", logo: docker },
+    { name: "GitHub", logo: github },
+    {name: "Jenkins", logo: jenkins},
+    {name: "Prometheus", logo: prom},
+    {name: "Kubernetes", logo: k8s},
+    {name: "Terraform", logo: terraform},
     //{ name: "Python", logo: python},
     //{ name: "HTML5", logo: html },
     //{ name: "CSS3", logo: css },
@@ -37,17 +43,12 @@ export const skillsData = {
   ],
   technical: [
     { name: "React", logo: react },
-    
-    
+    { name: "Java", logo: java },
     { name: "Node.js", logo: node },
     { name: "Spring Boot", logo: spring },
-    { name: "Docker", logo: docker },
-    {name: "Jenkins", logo: jenkins},
-    {name: "Prometheus", logo: prom},
-    {name: "Kubernetes", logo: k8s},
-    {name: "Terraform", logo: terraform},
-    { name: "Webrtc", logo: webtrc },
+    { name: "Git", logo: git },
     { name: "Mysql", logo: mysql },
+    { name: "Webrtc", logo: webtrc },
     { name: "Maven", logo: maven },
 
   ],
@@ -60,9 +61,7 @@ export const skillsData = {
 
   Extra: [
     { name: "Figma", logo: figma },
-    { name: "PhotoShop", logo: ps },
-    { name: "Git", logo: git },
-    { name: "GitHub", logo: github },
+    { name: "PhotoShop", logo: ps },    
     { name: "Bash", logo: bash }
   ]
 };

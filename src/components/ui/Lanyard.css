@@ -1,0 +1,55 @@
+.lanyard-root {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  min-height: 420px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border-global);
+  box-shadow: var(--shadow-global);
+}
+
+.lanyard-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.06);
+  transition: transform 300ms ease;
+}
+
+.lanyard-root:hover .lanyard-image {
+  transform: scale(1.02);
+}
+
+.lanyard-ring {
+  position: absolute;
+  inset: 16px;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.14);
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+.lanyard-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(125,211,252,0.24), transparent 22%),
+    radial-gradient(circle at 80% 28%, rgba(56,189,248,0.16), transparent 18%),
+    radial-gradient(circle at 50% 75%, rgba(37,99,235,0.08), transparent 32%);
+}
+
+.lanyard-wrapper {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transform-origin: center;
+}

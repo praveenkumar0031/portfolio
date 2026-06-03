@@ -111,6 +111,33 @@
   margin-bottom: 4px;
 }
 
+.timeline-top-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timeline-actions {
+  margin-top: 14px;
+}
+
+.checkout-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-global);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+  background: #4b8fed;
+}
+
 .resume-actions {
   display: flex;
   flex-wrap: wrap;

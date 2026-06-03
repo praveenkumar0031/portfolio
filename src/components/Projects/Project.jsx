@@ -25,7 +25,7 @@ export default function Project() {
   };
 
   useEffect(() => {
-    // Prevent background scroll while modal is open
+    
     document.body.classList.toggle("modal-open", Boolean(modalProject));
 
     const onKey = (e) => {
@@ -161,7 +161,7 @@ export default function Project() {
                   )}
                   {modalProject.live && (
                     <a href={modalProject.live} target="_blank" rel="noopener noreferrer" className="btn secondary">
-                      Live Demo
+                      Live 
                     </a>
                   )}
                 </div>

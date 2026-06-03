@@ -1,6 +1,6 @@
 ﻿import "./about.css";
 import { aboutData } from "../../assets/Datas/aboutData";
-//import Lanyard from "../../components/ui/Lanyard";
+
 import CircularText from "../../components/ui/CircularText";
 
 export default function About() {
@@ -68,15 +68,16 @@ export default function About() {
         <aside className="about-side">
           <div className="about-note">
             <p>
-              I build dependable software with a strong focus on backend systems, clean API design, and deployment readiness. My work is guided by practical engineering, user clarity, and System architecture. I also had some Microservices experience with springboot and docker and I am eager to expand my expertise in this area.
+              {aboutData.sidebar[0].details}
             </p>
           </div>
           <div className="about-card">
-            <h4>What I bring</h4>
+            <h4>{aboutData.sidebar[1].title}</h4>
             <ul className="about-bullets">
-              <li>Reliable full-stack development using React,Java/Node, SQL/Mongodb, and Docker with aws for hosting</li>
-              <li>Clean architecture with production-ready deployment patterns</li>
-              <li>Fast learning, strong organization, and team-first communication</li>
+              {[...Array(3)].map((_, index) => (
+                <li>{aboutData.sidebar[1].details[index]}</li>
+            
+          ))}
             </ul>
           </div>
         </aside>

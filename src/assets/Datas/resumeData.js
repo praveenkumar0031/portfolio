@@ -4,6 +4,7 @@ export const resumeTimeline = [
   title: "LeetCode Problem Solving",
   organization: "LeetCode",
   location: "Competitive Programming",
+  live:"https://leetcode.com/u/PRAVEEN_KUMAR-S",
   start: "2024",
   end: "Present",
   bullets: [
@@ -21,6 +22,7 @@ export const resumeTimeline = [
   location: "Remote",
   start: "2026/2",
   end: "3",
+  
   bullets: [
     "Contributed to open-source projects through Global Connect collaborative initiatives",
     "Worked on feature improvements, bug fixes, and UI enhancements in community-driven projects",

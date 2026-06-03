@@ -19,12 +19,31 @@ export default function Resume() {
                 <h3>{entry.title}</h3>
                 <span className="timeline-period">{entry.start} — {entry.end}</span>
               </div>
+              {entry.live && (
+                <div className="timeline-top-action">
+                  <a href={entry.live} target="_blank" rel="noopener noreferrer" className="timeline-org live-link">
+                    {entry.location}
+                  </a>
+                </div>
+              )}
               <p className="timeline-org">{entry.organization} · {entry.location}</p>
               <ul>
                 {entry.bullets.map((bullet, bulletIndex) => (
                   <li key={bulletIndex}>{bullet}</li>
                 ))}
               </ul>
+              {entry.live && (
+                <div className="timeline-actions">
+                  <a
+                    href={entry.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="checkout-btn"
+                  >
+                    Checkout
+                  </a>
+                </div>
+              )}
             </div>
           </article>
         ))}
