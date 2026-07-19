@@ -3,44 +3,47 @@ import img from '../suits.jpeg';
 export const selfimg = img;
 export const aboutData = {
     heroTitle: "Praveen Kumar S — Software Engineer",
-    marqueeText: "Let's Talk • Let's Build • Let's Ship •",
-    intro: "I am a dedicated and analytical Information Technology student with hands-on experience in software development through academic and personal projects. My goal is to leverage my skills in programming and problem-solving to contribute to a forward-thinking organization.",
 
+marqueeText: "Backend • Full-Stack • DevOps • Open Source • Let's Build •",
+
+intro: "Software Engineer with hands-on experience building full-stack applications, cloud-native infrastructure, and developer tools. I enjoy designing scalable backend systems, automating deployments with modern DevOps practices, and contributing to open-source projects that solve real engineering challenges.",
     image: {
         src: selfimg,
         alt: "Professional portrait of the developer",
     },
 
     competencies: [
-        
-        
-        {
-            title: "Backend Development:",
-            details: "Proficient in Java and SQL, demonstrated by building a Java Stack Task-manager,kafka based stock monitoring system using Java SpringBoot,chat-app,video-calling,console-based banking application with MySQL for data management.",
-            type: "skill-area"
-        },
-        {
-            title: "MERN Technologies:",
-            details: "Familiar with front-end React and back-end (Node js,Express) REST api development with JWT authentication and rate limiting and MongoDB for creating interactive production ready applications .",
-            type: "skill-area"
-        },
-        {
-            title: "Product Deployment:",
-            details: "Had Experience with devops tools like GitHub,Jenkins,docker,kubernetes and cloudplatforms like aws with terraform and monitoring tools like prometheus and grafana for tracking server metrics.",
-            type: "skill-area"
-        },
-        
-    ],
-    sidebar:[
-        {title:"",
-        details: "I build dependable software with a strong focus on backend systems, clean API design, and deployment readiness. My work is guided by practical engineering, user clarity, and System architecture. I also had some Microservices experience with springboot and docker and I am eager to expand my expertise in this area."
-        },{
-            title:"What I bring",
-            details:["Reliable full-stack development using React,Java/Node, SQL/Mongodb, and Docker with aws for hosting",
-              "Clean architecture with production-ready deployment patterns",
-              "Fast learning, strong organization, and team-first communication"
-                ]
-        }
-    ]
+    {
+        title: "Backend Development:",
+        details: "Strong foundation in Java, Spring Boot, Node.js, Express.js, SQL, and MongoDB. Built scalable REST APIs, authentication systems, real-time applications, microservices, and event-driven solutions using Kafka with a focus on clean architecture and performance.",
+        type: "skill-area"
+    },
+    {
+        title: "Full-Stack Development:",
+        details: "Experienced in building modern MERN applications with React, Node.js, Express.js, MongoDB, JWT authentication, WebSockets, and responsive UI design. Developed production-ready projects featuring real-time communication, secure authentication, and intuitive user experiences.",
+        type: "skill-area"
+    },
+    {
+        title: "DevOps & Cloud:",
+        details: "Hands-on experience with GitHub Actions, Docker, Kubernetes, AWS, Terraform, Jenkins, Prometheus, Grafana, and CI/CD automation. Skilled in containerization, Infrastructure as Code, cloud deployments, monitoring, and production-ready delivery pipelines.",
+        type: "skill-area"
+    }
+],
+
+sidebar: [
+    {
+        title: "",
+        details: "I build scalable software with a strong focus on backend engineering, cloud-native deployments, and developer productivity. Passionate about system design, DevOps automation, and open-source development, I enjoy creating tools that improve developer workflows and simplify complex engineering challenges."
+    },
+    {
+        title: "What I bring",
+        details: [
+            "Production-ready full-stack applications using React, Java/Spring Boot, Node.js, SQL, and MongoDB.",
+            "Cloud-native deployment experience with Docker, Kubernetes, AWS, Terraform, and CI/CD pipelines.",
+            "Strong backend engineering, API design, system architecture, and DevOps automation skills.",
+            "Open-source mindset with rapid learning ability, ownership, and collaborative team communication."
+        ]
+    }
+]
 };
 

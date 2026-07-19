@@ -8,7 +8,7 @@ export const resumeTimeline = [
   start: "2024",
   end: "Present",
   bullets: [
-    "Solved 450+ coding problems across Data Structures and Algorithms",
+    "Solved 500+ coding problems across Data Structures and Algorithms",
     "Earned 7+ LeetCode badges through consistent problem-solving and contests",
     "Strengthened problem-solving skills in arrays, trees, graphs, DP, and greedy algorithms",
     "Practiced optimized solutions with focus on time and space complexity",

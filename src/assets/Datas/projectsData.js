@@ -92,17 +92,17 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/filim.in.v1", 
     live: "https://praveenkumar0031.github.io/filim.in/home" 
   },
+  // { 
+  //   id: 9, 
+  //   title: "Smart Classroom Management System", 
+  //   type: "(SIH) Team", 
+  //   tech: "HTML, CSS, JavaScript, Flask, OpenCV, Pandas, Firebase", 
+  //   des: "An AI-powered platform for smart classroom operations. Contributed facial recognition–based automated attendance tracking and integrated data analytics to generate real-time reports alongside resource optimization features.", 
+  //   url: projectpic7, 
+  //   link: "https://github.com/praveenkumar0031/SIHproject" 
+  // },
   { 
     id: 9, 
-    title: "Smart Classroom Management System", 
-    type: "(SIH) Team", 
-    tech: "HTML, CSS, JavaScript, Flask, OpenCV, Pandas, Firebase", 
-    des: "An AI-powered platform for smart classroom operations. Contributed facial recognition–based automated attendance tracking and integrated data analytics to generate real-time reports alongside resource optimization features.", 
-    url: projectpic7, 
-    link: "https://github.com/praveenkumar0031/SIHproject" 
-  },
-  { 
-    id: 10, 
     title: "Task-Manager", 
     type: "Solo", 
     tech: "React.js, Java (Spring Boot), MySQL", 
@@ -111,7 +111,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/todo-List" 
   },
   { 
-    id: 11, 
+    id: 10, 
     title: "Video calling app", 
     type: "Solo", 
     tech: "React.js, Java (Spring Boot), WebRTC, WebSockets", 
@@ -120,7 +120,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/video-streaming-app" 
   },
   { 
-    id: 12, 
+    id: 11, 
     title: "Bank Management System", 
     type: "Solo", 
     tech: "Java, MySQL (JDBC)", 
@@ -128,17 +128,17 @@ export const projects = [
     url: projectpic2, 
     link: "https://github.com/praveenkumar0031/bank_management_system" 
   },
+  // { 
+  //   id: 13, 
+  //   title: "Chat app", 
+  //   type: "Solo", 
+  //   tech: "Java", 
+  //   des: "A terminal-driven private network room connecting clients directly. Built from scratch using native Java Network I/O Sockets to establish point-to-point server-client communication channels.", 
+  //   url: projectpic3, 
+  //   link: "https://github.com/praveenkumar0031/chat-app" 
+  // },
   { 
-    id: 13, 
-    title: "Chat app", 
-    type: "Solo", 
-    tech: "Java", 
-    des: "A terminal-driven private network room connecting clients directly. Built from scratch using native Java Network I/O Sockets to establish point-to-point server-client communication channels.", 
-    url: projectpic3, 
-    link: "https://github.com/praveenkumar0031/chat-app" 
-  },
-  { 
-    id: 14, 
+    id: 12, 
     title: "Weather app", 
     type: "Solo", 
     tech: "React.js, Tailwind CSS, OpenWeather API", 
