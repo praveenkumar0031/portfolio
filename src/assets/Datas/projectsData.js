@@ -6,15 +6,26 @@ import projectpic5 from '../projectpics/todos.jpeg'
 import projectpic6 from '../projectpics/videocall.jpeg'
 import projectpic7 from '../projectpics/scms.jpeg'
 import projectpic8 from '../projectpics/coach.jpeg'
-// New project image imports (Make sure these images exist in your directory)
 import projectpic9 from '../projectpics/skyflow.jpg'
 import projectpic10 from '../projectpics/hashtag.jpg'
 import projectpic11 from '../projectpics/excherish.jpg'
 import projectpic12 from '../projectpics/voxel.jpg'
+import projectpic13 from '../projectpics/goto.png'
+import projectpic14 from '../projectpics/stepscope.png'
 
 export const projects = [
+  {
+    id: 1,
+    title: "StepScope — Visual CI/CD Debugger & Pipeline Execution Analyzer",
+    type: "solo",
+    tech: "Node.js, TypeScript, React, Docker, WebSockets, GitHub Actions, NPM",
+    des: "An open-source, local-first CI/CD pipeline simulator that executes GitHub Actions workflows locally with interactive visual debugging. Features a real-time dashboard, DAG-based execution engine, parallel job scheduling, isolated Docker runners, live logs, dependency graphs, secret masking, and step-level diagnostics to help developers debug pipelines before pushing code.",
+    url: projectpic14, 
+    link: "https://github.com/praveenkumar0031/StepScope",
+    live: "https://www.npmjs.com/package/stepscope"
+  },
   { 
-    id: 1, 
+    id: 2, 
     title: "SkyFlow", 
     type: "Solo", 
     tech: "Jenkins, Terraform, Docker, Ansible, AWS (EC2, VPC)", 
@@ -22,8 +33,17 @@ export const projects = [
     url: projectpic9, 
     link: "https://github.com/praveenkumar0031/Sky-flow" 
   },
+  {
+  id: 3,
+  title: "GesticStudio – Gesture-Controlled 3D Design Studio",
+  type: "Solo",
+  tech: "MERN Stack, Three.js, MediaPipe Hands, Docker, Kubernetes, AWS EKS, GitHub",
+  des: "A gesture-controlled 3D design studio that transforms hand movements into intuitive 3D modeling using MediaPipe Hands and Three.js. Features a global gallery for sharing creations, persistent voxel storage, and a cloud-native deployment on AWS EKS with Docker, Kubernetes, and Ingress for scalable routing.",
+  url: projectpic12,
+  link: "https://github.com/praveenkumar0031/3d-tool"
+  },
   { 
-    id: 2, 
+    id: 4, 
     title: "Hashtag (Tea Talks)", 
     type: "Solo", 
     tech: "MongoDB, Express.js, React.js, Node.js, Socket.io", 
@@ -33,7 +53,17 @@ export const projects = [
     live: "https://hash-tag-henna.vercel.app" 
   },
   { 
-    id: 3, 
+    id: 5, 
+    title: "Goto — Enterprise-Grade URL Shortener & Real-Time Tracking", 
+    type: "solo", 
+    tech: "React, Node.js, Express.js, MongoDB, Vercel, Render", 
+    des: "An enterprise-grade URL shortener and real-time tracking platform built for the Katomaran Hackathon. Features secure URL shortening, real-time click analytics, detailed dashboards with Google-style visualizations, and bulk URL processing for efficient link management.", 
+    url: projectpic13,
+    link: "https://github.com/praveenkumar0031/go-to", 
+    live: "https://go-to-bice.vercel.app" 
+  },
+  { 
+    id: 6, 
     title: "Excherish", 
     type: "Solo", 
     tech: "React.js, Node.js, Express.js, MongoDB", 
@@ -41,17 +71,9 @@ export const projects = [
     url: projectpic11, 
     link: "https://github.com/praveenkumar0031/ex-cherish" 
   },
+  
   { 
-    id: 4, 
-    title: "3D Block Builder Tool", 
-    type: "Solo", 
-    tech: "React.js, Three.js / React Three Fiber, Tailwind CSS", 
-    des: "An interactive, web-based 3D block-building simulator inspired by Roblox and Minecraft. Utilizes WebGL components to allow users to generate, place, texture, and destroy blocks in a dynamic 3D canvas environment in real time.", 
-    url: projectpic12, 
-    link: "https://github.com/praveenkumar0031/3d-tool" 
-  },
-  { 
-    id: 5, 
+    id: 7, 
     title: "Coach Desk", 
     type: "Solo", 
     tech: "React (Vite), Tailwind CSS, Node.js, Express, Firebase", 
@@ -61,7 +83,7 @@ export const projects = [
     live: "https://coach-desk-dev.vercel.app" 
   },
   { 
-    id: 6, 
+    id: 8, 
     title: "Filimin", 
     type: "Team", 
     tech: "HTML, CSS, JavaScript, Firebase (Auth)", 
@@ -71,7 +93,7 @@ export const projects = [
     live: "https://praveenkumar0031.github.io/filim.in/home" 
   },
   { 
-    id: 7, 
+    id: 9, 
     title: "Smart Classroom Management System", 
     type: "(SIH) Team", 
     tech: "HTML, CSS, JavaScript, Flask, OpenCV, Pandas, Firebase", 
@@ -80,7 +102,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/SIHproject" 
   },
   { 
-    id: 8, 
+    id: 10, 
     title: "Task-Manager", 
     type: "Solo", 
     tech: "React.js, Java (Spring Boot), MySQL", 
@@ -89,7 +111,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/todo-List" 
   },
   { 
-    id: 9, 
+    id: 11, 
     title: "Video calling app", 
     type: "Solo", 
     tech: "React.js, Java (Spring Boot), WebRTC, WebSockets", 
@@ -98,7 +120,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/video-streaming-app" 
   },
   { 
-    id: 10, 
+    id: 12, 
     title: "Bank Management System", 
     type: "Solo", 
     tech: "Java, MySQL (JDBC)", 
@@ -107,7 +129,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/bank_management_system" 
   },
   { 
-    id: 11, 
+    id: 13, 
     title: "Chat app", 
     type: "Solo", 
     tech: "Java", 
@@ -116,7 +138,7 @@ export const projects = [
     link: "https://github.com/praveenkumar0031/chat-app" 
   },
   { 
-    id: 12, 
+    id: 14, 
     title: "Weather app", 
     type: "Solo", 
     tech: "React.js, Tailwind CSS, OpenWeather API", 
@@ -124,7 +146,9 @@ export const projects = [
     url: projectpic4, 
     link: "https://github.com/praveenkumar0031/weather-app", 
     live: "https://weather-app-rho-wheat.vercel.app" 
-  }
+  },
+  
+  
 ];
 
 export function getProjectCount() {
