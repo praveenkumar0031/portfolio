@@ -64,7 +64,7 @@ export default function Footer() {
         <div className="footer-meta">
           <p>© 2026 | Praveen Kumar</p>
           <p>
-            Site by <span className="gradient-text">Praveen Kumar</span>
+            Developed by <span className="gradient-text">Praveen Kumar</span>
           </p>
           <p>All rights reserved.</p>
         </div>
