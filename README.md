@@ -118,11 +118,10 @@ npm run build
 
 ## 🌐 Deployment
 
-You can deploy this portfolio using:
+I deployed this portfolio using:
 
-- Vercel
-- Netlify
 - GitHub Pages
+- Domain mapping
 
 ---
 
