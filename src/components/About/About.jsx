@@ -1,5 +1,5 @@
 ﻿import "./about.css";
-import { aboutData } from "../../assets/Datas/aboutData";
+import { aboutData, fsdimg } from "../../assets/Datas/aboutData";
 
 import CircularText from "../../components/ui/CircularText";
 
@@ -47,6 +47,8 @@ export default function About() {
           <div className="hero-visuals-frame">
             <div className="image-panel">
               <img src={image.src} alt={image.alt} />
+              
+
             </div>
             <div className="hero-circle-wrapper">
               <CircularText text="Full Stack Developer • Creative •" />

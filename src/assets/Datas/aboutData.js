@@ -1,6 +1,7 @@
-import img from '../suits.jpeg';
-
+import img from '../pklight.png';
+import fsd from '../fullstack.jpg';
 export const selfimg = img;
+export const fsdimg = fsd;
 export const aboutData = {
     heroTitle: "Praveen Kumar S — Software Engineer",
 
