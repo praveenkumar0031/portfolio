@@ -7,7 +7,7 @@ export const aboutData = {
 
 marqueeText: "Backend • Full-Stack • DevOps • Open Source • Let's Build •",
 
-intro: "Software Engineer with hands-on experience building full-stack applications, cloud-native infrastructure, and developer tools. I enjoy designing scalable backend systems, automating deployments with modern DevOps practices, and contributing to open-source projects that solve real engineering challenges.",
+intro: "Software Engineer with hands-on experience building full-stack applications, cloud-native infrastructure and developer tools. I enjoy designing scalable backend systems, automating deployments with modern DevOps practices and contributing to open-source projects that solve real engineering challenges.",
     image: {
         src: selfimg,
         alt: "Professional portrait of the developer",
@@ -16,7 +16,7 @@ intro: "Software Engineer with hands-on experience building full-stack applicati
     competencies: [
     {
         title: "Backend Development:",
-        details: "Strong foundation in Java, Spring Boot, Node.js, Express.js, SQL, and MongoDB. Built scalable REST APIs, authentication systems, real-time applications, microservices, and event-driven solutions using Kafka with a focus on clean architecture and performance.",
+        details: "Strong foundation in Java, Node.js, Express.js, SQL and MongoDB. Built scalable REST APIs, authentication systems, real-time applications, microservices and event-driven solutions using Kafka with a focus on clean architecture and performance.",
         type: "skill-area"
     },
     {
@@ -26,7 +26,7 @@ intro: "Software Engineer with hands-on experience building full-stack applicati
     },
     {
         title: "DevOps & Cloud:",
-        details: "Hands-on experience with GitHub Actions, Docker, Kubernetes, AWS, Terraform, Jenkins, Prometheus, Grafana, and CI/CD automation. Skilled in containerization, Infrastructure as Code, cloud deployments, monitoring, and production-ready delivery pipelines.",
+        details: "Hands-on experience with GitHub Actions, Docker, Kubernetes, AWS, Terraform, Jenkins, Prometheus, Grafana, ArgoCD and CI/CD automation. Skilled in containerization, Infrastructure as Code, cloud deployments, monitoring and production-ready delivery pipelines.",
         type: "skill-area"
     }
 ],
@@ -34,15 +34,15 @@ intro: "Software Engineer with hands-on experience building full-stack applicati
 sidebar: [
     {
         title: "",
-        details: "I build scalable software with a strong focus on backend engineering, cloud-native deployments, and developer productivity. Passionate about system design, DevOps automation, and open-source development, I enjoy creating tools that improve developer workflows and simplify complex engineering challenges."
+        details: "I build scalable software with a strong focus on backend engineering, cloud-native deployments and developer productivity. Passionate about system design, DevOps automation and open-source development, I enjoy creating tools that improve developer workflows and simplify complex engineering challenges."
     },
     {
         title: "What I bring",
         details: [
-            "Production-ready full-stack applications using React, Java/Spring Boot, Node.js, SQL, and MongoDB.",
-            "Cloud-native deployment experience with Docker, Kubernetes, AWS, Terraform, and CI/CD pipelines.",
-            "Strong backend engineering, API design, system architecture, and DevOps automation skills.",
-            "Open-source mindset with rapid learning ability, ownership, and collaborative team communication."
+            "Production-ready Full-stack applications using React, Java/Spring Boot, Node.js, SQL, and MongoDB.",
+            "Cloud-native deployment experience with Docker, Kubernetes, AWS, Terraform and CI/CD pipelines.",
+            "Strong backend engineering, API design, system architecture and DevOps automation skills.",
+            "Open-source mindset with rapid learning ability, ownership and collaborative team communication."
         ]
     }
 ]
